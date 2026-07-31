@@ -93,7 +93,7 @@ const breadcrumbSchema = breadcrumbs && breadcrumbs.length > 0 ? {
         if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
           return localStorage.getItem('theme');
         }
-        return 'light';
+        return 'dark';
       };
       const setTheme = (theme) => {
         document.documentElement.setAttribute('data-theme', theme);

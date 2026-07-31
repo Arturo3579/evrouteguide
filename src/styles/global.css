@@ -1,42 +1,45 @@
 :root {
-  /* Paleta principal: Azul Eléctrico (EV tech) */
-  --color-primary: #2563eb;
-  --color-primary-light: #3b82f6;
-  --color-primary-hover: #1d4ed8;
-  --color-primary-dark: #1e40af;
-  --color-primary-bg: #eff6ff;
+  /* === MIDNIGHT SLATE: Dark Professional Theme === */
+  /* Default state is dark. Use [data-theme="light"] for light mode. */
 
-  /* Acento: Naranja Carga (EV charging) */
-  --color-accent: #f97316;
-  --color-accent-light: #fb923c;
-  --color-accent-bg: #fff7ed;
+  /* Paleta principal: Azul Cielo Brillante */
+  --color-primary: #38bdf8;
+  --color-primary-light: #7dd3fc;
+  --color-primary-hover: #0ea5e9;
+  --color-primary-dark: #0284c7;
+  --color-primary-bg: #082f49;
 
-  /* Highlight: Verde "Cargado" */
+  /* Acento: Naranja Cálido (CTAs) */
+  --color-accent: #fb923c;
+  --color-accent-light: #fdba74;
+  --color-accent-bg: #431407;
+
+  /* Highlight: Verde */
   --color-highlight: #22c55e;
-  --color-highlight-bg: #f0fdf4;
+  --color-highlight-bg: #052e16;
 
-  /* Fondos: fríos, limpios */
-  --color-bg: #ffffff;
-  --color-bg-alt: #f8fafc;
-  --color-bg-warm: #f1f5f9;
-  --color-card: #ffffff;
+  /* Fondos: Slate oscuro */
+  --color-bg: #0f172a;
+  --color-bg-alt: #1e293b;
+  --color-bg-warm: #334155;
+  --color-card: #1e293b;
 
-  /* Texto: slate profundo */
-  --color-text: #0f172a;
-  --color-text-secondary: #334155;
-  --color-text-muted: #64748b;
-  --color-text-light: #94a3b8;
+  /* Texto */
+  --color-text: #f8fafc;
+  --color-text-secondary: #cbd5e1;
+  --color-text-muted: #94a3b8;
+  --color-text-light: #64748b;
 
   /* Bordes y sombras */
-  --color-border: #e2e8f0;
-  --color-border-light: #f1f5f9;
-  --color-shadow: rgba(15, 23, 42, 0.06);
-  --color-shadow-lg: rgba(15, 23, 42, 0.1);
+  --color-border: #334155;
+  --color-border-light: #1e293b;
+  --color-shadow: rgba(0, 0, 0, 0.3);
+  --color-shadow-lg: rgba(0, 0, 0, 0.5);
 
-  /* Footer: slate oscuro */
-  --color-footer-bg: #1e293b;
-  --color-footer-text: #f1f5f9;
-  --color-footer-muted: #94a3b8;
+  /* Footer: casi negro slate */
+  --color-footer-bg: #020617;
+  --color-footer-text: #e2e8f0;
+  --color-footer-muted: #64748b;
 
   /* Tipografía */
   --font-display: "Outfit", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
@@ -52,38 +55,39 @@
   --radius-xl: 28px;
 }
 
-[data-theme="dark"] {
-  --color-primary: #3b82f6;
-  --color-primary-light: #60a5fa;
-  --color-primary-hover: #2563eb;
-  --color-primary-dark: #1d4ed8;
-  --color-primary-bg: #1e3a8a;
+[data-theme="light"] {
+  /* Light mode fallback (rarely used in Midnight Slate) */
+  --color-primary: #0284c7;
+  --color-primary-light: #38bdf8;
+  --color-primary-hover: #0ea5e9;
+  --color-primary-dark: #0369a1;
+  --color-primary-bg: #e0f2fe;
 
-  --color-accent: #fb923c;
-  --color-accent-light: #fdba74;
-  --color-accent-bg: #7c2d12;
+  --color-accent: #f97316;
+  --color-accent-light: #fb923c;
+  --color-accent-bg: #fff7ed;
 
-  --color-highlight: #4ade80;
-  --color-highlight-bg: #14532d;
+  --color-highlight: #16a34a;
+  --color-highlight-bg: #dcfce7;
 
-  --color-bg: #0f172a;
-  --color-bg-alt: #1e293b;
-  --color-bg-warm: #334155;
-  --color-card: #1e293b;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f8fafc;
+  --color-bg-warm: #f1f5f9;
+  --color-card: #ffffff;
 
-  --color-text: #f8fafc;
-  --color-text-secondary: #cbd5e1;
-  --color-text-muted: #94a3b8;
-  --color-text-light: #64748b;
+  --color-text: #0f172a;
+  --color-text-secondary: #334155;
+  --color-text-muted: #64748b;
+  --color-text-light: #94a3b8;
 
-  --color-border: #334155;
-  --color-border-light: #1e293b;
-  --color-shadow: rgba(0, 0, 0, 0.3);
-  --color-shadow-lg: rgba(0, 0, 0, 0.4);
+  --color-border: #e2e8f0;
+  --color-border-light: #f1f5f9;
+  --color-shadow: rgba(15, 23, 42, 0.06);
+  --color-shadow-lg: rgba(15, 23, 42, 0.1);
 
-  --color-footer-bg: #020617;
-  --color-footer-text: #e2e8f0;
-  --color-footer-muted: #64748b;
+  --color-footer-bg: #1e293b;
+  --color-footer-text: #f1f5f9;
+  --color-footer-muted: #94a3b8;
 }
 
 *,
