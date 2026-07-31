@@ -148,8 +148,7 @@ a:hover {
 
 /* ===== HEADER ===== */
 .site-header {
-  background: rgba(248, 250, 252, 0.92);
-  backdrop-filter: blur(8px);
+  background: var(--color-card);
   border-bottom: 1px solid var(--color-border);
   padding: 1rem 0;
   position: sticky;
@@ -207,7 +206,7 @@ a:hover {
 .site-nav a {
   font-size: 0.875rem;
   font-weight: 500;
-  color: var(--color-text-secondary);
+  color: var(--color-text);
   position: relative;
   padding: 0.25rem 0;
   letter-spacing: -0.01em;
@@ -219,14 +218,14 @@ a:hover {
   bottom: -2px;
   left: 0;
   width: 0;
-  height: 2.5px;
+  height: 2px;
   background: var(--color-primary);
   transition: width 0.25s ease;
   border-radius: 2px;
 }
 
 .site-nav a:hover {
-  color: var(--color-text);
+  color: var(--color-primary-hover);
   text-decoration: none;
 }
 
@@ -236,10 +235,10 @@ a:hover {
 
 /* Theme Toggle Button */
 .theme-toggle {
-  background: var(--color-bg-alt);
-  border: 1.5px solid var(--color-border);
+  background: transparent;
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  padding: 0.45rem 0.65rem;
+  padding: 0.5rem;
   cursor: pointer;
   font-size: 1rem;
   display: flex;
@@ -250,9 +249,9 @@ a:hover {
 }
 
 .theme-toggle:hover {
-  background: var(--color-primary-bg);
-  border-color: var(--color-primary-light);
-  color: var(--color-primary);
+  background: var(--color-bg-warm);
+  border-color: var(--color-text-light);
+  color: var(--color-text);
 }
 
 .theme-icon {
