@@ -1,22 +1,14 @@
 ---
 export interface Props {
   date: string;
-  cycle?: "6 months" | "12 months" | "18-24 months";
 }
 
-const { date, cycle = "12 months" } = Astro.props;
-
-const cycleConfig = {
-  "6 months": { bg: "#fef2f2", color: "#991b1b", text: "Reviewed every 6 months" },
-  "12 months": { bg: "#fffbeb", color: "#92400e", text: "Reviewed every 12 months" },
-  "18-24 months": { bg: "#f0fdf4", color: "#065f46", text: "Reviewed every 18-24 months" },
-};
-const style = cycleConfig[cycle];
+const { date } = Astro.props;
 ---
 <div class="post-meta">
   <span class="update-date">Updated {date}</span>
   <span class="sep">·</span>
-  <span class="review-badge" style={`background-color:${style.bg};color:${style.color}`}>{style.text}</span>
+  <span class="review-badge">Reviewed every month</span>
   <span class="sep">·</span>
   <span>EV Route Guide</span>
 </div>

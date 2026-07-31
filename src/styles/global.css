@@ -756,6 +756,8 @@ a:hover {
   text-transform: uppercase;
   letter-spacing: 0.04em;
   white-space: nowrap;
+  background-color: var(--color-primary-bg);
+  color: var(--color-primary-dark);
 }
 
 .post-content {
