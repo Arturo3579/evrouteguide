@@ -1,44 +1,44 @@
 :root {
   /* === MONOCHROME PROFESSIONAL: Clean, no colors === */
 
-  /* Primary: near-black, used for buttons, links, headings */
-  --color-primary: #171717;
-  --color-primary-light: #404040;
-  --color-primary-hover: #262626;
-  --color-primary-dark: #0a0a0a;
-  --color-primary-bg: #f5f5f5;
+  /* Primary: steel gray, softer than black */
+  --color-primary: #374151;
+  --color-primary-light: #4b5563;
+  --color-primary-hover: #4b5563;
+  --color-primary-dark: #1f2937;
+  --color-primary-bg: #f3f4f6;
 
-  /* Accent: dark gray (no colorful accent) */
-  --color-accent: #525252;
-  --color-accent-light: #737373;
-  --color-accent-bg: #f5f5f5;
+  /* Accent: medium gray */
+  --color-accent: #6b7280;
+  --color-accent-light: #9ca3af;
+  --color-accent-bg: #f3f4f6;
 
-  /* Highlight: dark gray-green (subtle) */
-  --color-highlight: #166534;
-  --color-highlight-bg: #f0fdf4;
+  /* Highlight: subtle blue-gray */
+  --color-highlight: #3b82f6;
+  --color-highlight-bg: #eff6ff;
 
   /* Fondos: pure white and soft grays */
   --color-bg: #ffffff;
   --color-bg-alt: #fafafa;
-  --color-bg-warm: #f5f5f5;
+  --color-bg-warm: #f3f4f6;
   --color-card: #ffffff;
 
-  /* Texto: neutral gray scale */
-  --color-text: #171717;
-  --color-text-secondary: #525252;
-  --color-text-muted: #737373;
-  --color-text-light: #a3a3a3;
+  /* Texto: softer than pure black */
+  --color-text: #1f2937;
+  --color-text-secondary: #4b5563;
+  --color-text-muted: #6b7280;
+  --color-text-light: #9ca3af;
 
   /* Bordes y sombras: extremely subtle */
-  --color-border: #e5e5e5;
-  --color-border-light: #f5f5f5;
+  --color-border: #e5e7eb;
+  --color-border-light: #f3f4f6;
   --color-shadow: rgba(0, 0, 0, 0.04);
   --color-shadow-lg: rgba(0, 0, 0, 0.08);
 
-  /* Footer: white with subtle top border, not dark */
-  --color-footer-bg: #fafafa;
-  --color-footer-text: #171717;
-  --color-footer-muted: #737373;
+  /* Footer: white with subtle top border */
+  --color-footer-bg: #ffffff;
+  --color-footer-text: #1f2937;
+  --color-footer-muted: #6b7280;
 
   /* Tipografía: Inter everywhere, clean and neutral */
   --font-display: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
@@ -131,7 +131,7 @@ a {
 }
 
 a:hover {
-  color: var(--color-primary-hover);
+  color: var(--color-primary-light);
 }
 
 /* ===== CONTAINER ===== */
@@ -473,23 +473,24 @@ a:hover {
 .btn-primary {
   background: var(--color-primary);
   color: #ffffff;
+  font-weight: 500;
 }
 
 .btn-primary:hover {
-  background: var(--color-primary-hover);
+  background: var(--color-primary-light);
   transform: translateY(-1px);
   text-decoration: none;
   color: #ffffff;
 }
 
 .btn-secondary {
-  background: transparent;
+  background: var(--color-card);
   color: var(--color-text-secondary);
   border: 1px solid var(--color-border);
 }
 
 .btn-secondary:hover {
-  border-color: var(--color-text-muted);
+  border-color: var(--color-text-light);
   color: var(--color-text);
   transform: translateY(-1px);
   text-decoration: none;
@@ -526,8 +527,8 @@ a:hover {
 }
 
 .hub-card:hover {
-  box-shadow: 0 4px 20px var(--color-shadow-lg);
-  border-color: var(--color-border);
+  box-shadow: 0 6px 24px var(--color-shadow-lg);
+  border-color: var(--color-border-light);
   transform: translateY(-2px);
 }
 
