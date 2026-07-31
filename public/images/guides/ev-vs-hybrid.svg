@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0fdf4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#dcfce7;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="evGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="hybridGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#22c55e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16a34a;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#1e3a8a" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgGrad)" rx="20"/>
+  
+  <!-- Subtle grid -->
+  <g opacity="0.05" stroke="#16a34a" stroke-width="1">
+    <line x1="400" y1="0" x2="400" y2="450"/>
+    <line x1="0" y1="225" x2="800" y2="225"/>
+  </g>
+  
+  <!-- VS Badge -->
+  <g transform="translate(360, 200)">
+    <circle cx="40" cy="25" r="32" fill="white" stroke="#e2e8f0" stroke-width="2" filter="url(#shadow)"/>
+    <text x="40" y="32" text-anchor="middle" fill="#64748b" font-family="system-ui, sans-serif" font-size="16" font-weight="800">VS</text>
+  </g>
+  
+  <!-- Left side: EV Car -->
+  <g transform="translate(80, 160)" filter="url(#shadow)">
+    <rect x="0" y="0" width="280" height="140" rx="16" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+    <!-- Car icon -->
+    <g transform="translate(40, 35)">
+      <path d="M 10 50 Q 10 25 35 20 L 75 18 Q 100 15 115 25 L 135 35 Q 148 40 150 50 L 150 65 Q 150 72 140 72 L 120 72 Q 110 72 110 65 L 110 62 L 50 62 L 50 65 Q 50 72 40 72 L 20 72 Q 10 72 10 65 Z" 
+            fill="url(#evGrad)" opacity="0.9"/>
+      <circle cx="40" cy="72" r="10" fill="#1e293b"/>
+      <circle cx="120" cy="72" r="10" fill="#1e293b"/>
+      <circle cx="142" cy="42" r="3" fill="#fbbf24"/>
+      <circle cx="80" cy="45" r="4" fill="#22c55e"/>
+    </g>
+    <text x="140" y="115" text-anchor="middle" fill="#1e3a8a" font-family="system-ui, sans-serif" font-size="16" font-weight="700">FULLY ELECTRIC</text>
+    <text x="140" y="132" text-anchor="middle" fill="#64748b" font-family="system-ui, sans-serif" font-size="11">Plug-in, zero emissions</text>
+  </g>
+  
+  <!-- Right side: Hybrid Car -->
+  <g transform="translate(440, 160)" filter="url(#shadow)">
+    <rect x="0" y="0" width="280" height="140" rx="16" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+    <!-- Car icon -->
+    <g transform="translate(40, 35)">
+      <path d="M 10 50 Q 10 25 35 20 L 75 18 Q 100 15 115 25 L 135 35 Q 148 40 150 50 L 150 65 Q 150 72 140 72 L 120 72 Q 110 72 110 65 L 110 62 L 50 62 L 50 65 Q 50 72 40 72 L 20 72 Q 10 72 10 65 Z" 
+            fill="url(#hybridGrad)" opacity="0.9"/>
+      <circle cx="40" cy="72" r="10" fill="#1e293b"/>
+      <circle cx="120" cy="72" r="10" fill="#1e293b"/>
+      <circle cx="142" cy="42" r="3" fill="#fbbf24"/>
+      <!-- Hybrid badge on car -->
+      <rect x="65" y="40" width="30" height="12" rx="3" fill="white" opacity="0.9"/>
+      <text x="80" y="49" text-anchor="middle" fill="#16a34a" font-family="system-ui, sans-serif" font-size="7" font-weight="700">HYBRID</text>
+    </g>
+    <text x="140" y="115" text-anchor="middle" fill="#14532d" font-family="system-ui, sans-serif" font-size="16" font-weight="700">HYBRID / PHEV</text>
+    <text x="140" y="132" text-anchor="middle" fill="#64748b" font-family="system-ui, sans-serif" font-size="11">Gas + electric motor</text>
+  </g>
+  
+  <!-- Comparison metrics below -->
+  <g transform="translate(80, 330)">
+    <rect x="0" y="0" width="130" height="50" rx="10" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+    <text x="65" y="20" text-anchor="middle" fill="#1d4ed8" font-family="system-ui, sans-serif" font-size="10" font-weight="600">FUEL COST</text>
+    <text x="65" y="38" text-anchor="middle" fill="#3b82f6" font-family="system-ui, sans-serif" font-size="12" font-weight="700">$500/yr vs $1,800</text>
+  </g>
+  
+  <g transform="translate(225, 330)">
+    <rect x="0" y="0" width="130" height="50" rx="10" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
+    <text x="65" y="20" text-anchor="middle" fill="#14532d" font-family="system-ui, sans-serif" font-size="10" font-weight="600">RANGE</text>
+    <text x="65" y="38" text-anchor="middle" fill="#16a34a" font-family="system-ui, sans-serif" font-size="12" font-weight="700">250-350 mi vs 600+ mi</text>
+  </g>
+  
+  <g transform="translate(445, 330)">
+    <rect x="0" y="0" width="130" height="50" rx="10" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+    <text x="65" y="20" text-anchor="middle" fill="#7c2d12" font-family="system-ui, sans-serif" font-size="10" font-weight="600">HOME CHARGING</text>
+    <text x="65" y="38" text-anchor="middle" fill="#f97316" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Required vs Optional</text>
+  </g>
+  
+  <g transform="translate(590, 330)">
+    <rect x="0" y="0" width="130" height="50" rx="10" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1"/>
+    <text x="65" y="20" text-anchor="middle" fill="#5b21b6" font-family="system-ui, sans-serif" font-size="10" font-weight="600">MAINTENANCE</text>
+    <text x="65" y="38" text-anchor="middle" fill="#7c3aed" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Minimal vs Regular</text>
+  </g>
+  
+  <!-- Title -->
+  <text x="400" y="60" text-anchor="middle" fill="#0f172a" font-family="system-ui, sans-serif" font-size="24" font-weight="800" letter-spacing="-0.02em">EV vs HYBRID</text>
+  <text x="400" y="88" text-anchor="middle" fill="#64748b" font-family="system-ui, sans-serif" font-size="14" font-weight="500">Which powertrain fits your lifestyle?</text>
+</svg>
