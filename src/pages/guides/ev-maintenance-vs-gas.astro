@@ -1,0 +1,178 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "EV Maintenance vs Gas Cars: The Complete Cost Breakdown";
+const description = "Electric vehicles cost significantly less to maintain than gas cars. Learn exactly what EVs don't need, what they do need, and see real 5-year and 10-year cost projections.";
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Guides", url: "/guides" },
+  { name: "EV Maintenance vs Gas Cars", url: "/guides/ev-maintenance-vs-gas" }
+];
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": title,
+  "description": description,
+  "author": { "@type": "Organization", "name": "EV Route Guide" },
+  "publisher": { "@type": "Organization", "name": "EV Route Guide", "logo": { "@type": "ImageObject", "url": "https://www.evrouteguide.com/images/logo.svg" } },
+  "datePublished": "2026-07-31",
+  "dateModified": "2026-07-31"
+};
+---
+<BaseLayout title={title} description={description} breadcrumbs={breadcrumbs}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} slot="head" />
+
+  <div class="page-content container-narrow">
+    <nav class="breadcrumbs" aria-label="breadcrumb">
+      <a href="/">Home</a>
+      <span class="sep">›</span>
+      <a href="/guides">Guides</a>
+      <span class="sep">›</span>
+      <span class="current">{title}</span>
+    </nav>
+
+    <article class="post-article">
+      <header class="post-header">
+        <h1 class="post-title">{title}</h1>
+        <div class="post-meta">
+          <span>Updated July 2026</span>
+          <span>•</span>
+          <span>EV Route Guide</span>
+        </div>
+      </header>
+
+      <div class="post-content">
+        <p>
+          One of the most compelling reasons to switch to an electric vehicle is the dramatically lower maintenance burden. Without an internal combustion engine, transmission, or exhaust system, EVs eliminate many of the routine services that gasoline vehicles require. But EVs are not maintenance-free. Understanding exactly what EVs don't need, what they do need, and how the costs compare over time helps you make an informed buying decision.
+        </p>
+
+        <h2>What EVs Don't Need</h2>
+        <p>
+          The absence of a gasoline engine removes several of the most common and expensive maintenance items. EV owners never need oil changes because there is no engine oil to lubricate moving parts. Similarly, spark plugs, ignition coils, and fuel injectors are entirely absent from the powertrain. The single-speed direct-drive transmission in most EVs eliminates transmission fluid changes, filter replacements, and the costly transmission repairs that plague many gas vehicles after 100,000 miles.
+        </p>
+        <p>
+          EVs also do not have exhaust systems, catalytic converters, oxygen sensors, or mufflers. These components are frequent failure points in gas cars and can cost hundreds or even thousands of dollars to replace. Timing belts and chains, which require expensive service intervals in many gas engines, are also absent. Additionally, EVs do not need smog checks or emissions testing in most states, saving both time and money.
+        </p>
+
+        <h2>What EVs Do Need</h2>
+        <p>
+          Despite the simpler drivetrain, EVs still require regular attention to several components. Tires are the single most frequent maintenance item. Because EVs are heavier than comparable gas cars and deliver instant torque, tires tend to wear faster. Many EV owners report needing replacement tires every 25,000 to 40,000 miles, especially on performance-oriented models. Rotating tires every 5,000 to 8,000 miles helps extend their life.
+        </p>
+        <p>
+          Brake maintenance is generally lighter thanks to regenerative braking, which slows the car by reversing the motor and recharging the battery. However, brake fluid still needs periodic inspection and replacement according to the manufacturer's schedule, typically every two to five years. Brake pads and rotors last significantly longer but may eventually require replacement, especially if the car is driven aggressively.
+        </p>
+        <p>
+          Cabin air filters need replacement every 15,000 to 30,000 miles to maintain air quality and HVAC efficiency. Battery coolant, which keeps the high-voltage pack at the right temperature, requires inspection and occasional replacement, though intervals vary widely by manufacturer. The 12-volt auxiliary battery, which powers accessories and initializes the high-voltage system, can fail just like in a gas car and typically lasts three to five years. Windshield wipers, washer fluid, and air conditioning refrigerant are also ongoing needs.
+        </p>
+
+        <h2>Regenerative Braking and Brake Longevity</h2>
+        <p>
+          Regenerative braking is one of the most underappreciated maintenance advantages of EVs. In normal driving, lifting off the accelerator triggers motor resistance that slows the vehicle while sending energy back to the battery. This means the friction brakes are used far less frequently. Fleet data from Tesla and other manufacturers shows that EV brake pads can last 100,000 miles or more, compared to roughly 30,000 to 70,000 miles on a typical gas vehicle. Rotor corrosion can be a concern in humid or salty climates if the friction brakes are not exercised regularly, so occasional hard braking is recommended to keep the surfaces clean.
+        </p>
+
+        <h2>Average Annual Maintenance Cost Comparison</h2>
+        <p>
+          Real-world data from fleet management companies, AAA, and consumer surveys consistently shows that EV maintenance costs are substantially lower. The following table summarizes average annual maintenance and repair costs for typical mainstream vehicles.
+        </p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Maintenance Category</th>
+              <th>Gas Car (Annual)</th>
+              <th>EV (Annual)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Oil Changes</td>
+              <td>$80 – $150</td>
+              <td>$0</td>
+            </tr>
+            <tr>
+              <td>Tires & Rotation</td>
+              <td>$120 – $200</td>
+              <td>$180 – $300</td>
+            </tr>
+            <tr>
+              <td>Brake Service</td>
+              <td>$150 – $300</td>
+              <td>$40 – $100</td>
+            </tr>
+            <tr>
+              <td>Engine & Transmission</td>
+              <td>$200 – $500</td>
+              <td>$0</td>
+            </tr>
+            <tr>
+              <td>Filters & Fluids</td>
+              <td>$100 – $200</td>
+              <td>$50 – $100</td>
+            </tr>
+            <tr>
+              <td>Exhaust & Emissions</td>
+              <td>$50 – $150</td>
+              <td>$0</td>
+            </tr>
+            <tr>
+              <td><strong>Total Estimated Annual</strong></td>
+              <td><strong>$700 – $1,500</strong></td>
+              <td><strong>$270 – $500</strong></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="tip-box">
+          <strong>Key Takeaway:</strong> EVs typically cost 40% to 60% less to maintain annually than comparable gas vehicles. The biggest savings come from eliminated oil changes, transmission service, and exhaust repairs. The main tradeoff is faster tire wear due to weight and torque.
+        </div>
+
+        <h2>Long-Term Cost Projections</h2>
+        <p>
+          To understand the full financial picture, it helps to look beyond annual averages and consider cumulative costs over five and ten years. These projections include routine maintenance, wear items, and typical midlife repairs such as water pump or alternator replacement on gas cars, and 12V battery or coolant service on EVs.
+        </p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Time Period</th>
+              <th>Gas Car (Cumulative)</th>
+              <th>EV (Cumulative)</th>
+              <th>Savings</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>5 Years</td>
+              <td>$4,000 – $7,500</td>
+              <td>$1,500 – $2,800</td>
+              <td>$2,500 – $4,700</td>
+            </tr>
+            <tr>
+              <td>10 Years</td>
+              <td>$9,000 – $16,000</td>
+              <td>$3,500 – $6,000</td>
+              <td>$5,500 – $10,000</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>
+          Over a decade, the savings can exceed $10,000 depending on the gas vehicle's reliability and the EV's tire expenses. It is worth noting that EVs have fewer parts that can fail catastrophically. There is no timing belt to snap, no transmission to rebuild, and no catalytic converter to replace. These potential failure points add both cost and unpredictability to gas vehicle ownership.
+        </p>
+
+        <h2>Warranty and Battery Considerations</h2>
+        <p>
+          High-voltage battery packs are covered by long warranties, typically eight years or 100,000 miles, with many manufacturers extending coverage to 150,000 miles or more. Battery replacements outside of warranty are expensive, but failure rates remain low for modern EVs. For the purposes of routine maintenance budgeting, battery replacement should not be counted as a regular expected expense.
+        </p>
+
+        <h2>Final Verdict</h2>
+        <p>
+          EV maintenance is simpler, cheaper, and more predictable than gas car maintenance. The main ongoing costs are tires, cabin filters, and occasional brake fluid and coolant service. Over a typical ownership period of five to ten years, EV owners save thousands of dollars while spending less time at service centers. If you are evaluating total cost of ownership, pairing lower maintenance with reduced fuel costs makes the EV case even stronger.
+        </p>
+
+        <p>
+          Interested in home charging? See our guide to the <a href="/guides/best-home-ev-chargers">best home EV chargers</a> to complete your setup. And if you are still deciding which EV to buy, our roundup of the <a href="/guides/longest-range-electric-cars">longest-range electric cars</a> can help you find a model that minimizes range anxiety.
+        </p>
+      </div>
+    </article>
+  </div>
+</BaseLayout>

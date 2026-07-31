@@ -1,0 +1,201 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "How Much Does It Cost to Install an EV Charger?";
+const description = "Complete 2026 cost breakdown for installing a home EV charger, including electrician labor, permits, panel upgrades, and available tax credits.";
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Guides", url: "/guides" },
+  { name: title, url: "/guides/install-ev-charger-cost" }
+];
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": title,
+  "description": description,
+  "author": { "@type": "Organization", "name": "EV Route Guide" },
+  "publisher": { "@type": "Organization", "name": "EV Route Guide", "logo": { "@type": "ImageObject", "url": "https://www.evrouteguide.com/images/logo.svg" } },
+  "datePublished": "2026-07-31",
+  "dateModified": "2026-07-31"
+};
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": breadcrumbs.map((b, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "name": b.name,
+    "item": `https://www.evrouteguide.com${b.url}`
+  }))
+};
+---
+<BaseLayout title={title} description={description} breadcrumbs={breadcrumbs}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} slot="head" />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} slot="head" />
+
+  <div class="page-content container-narrow">
+    <nav class="breadcrumbs" aria-label="breadcrumb">
+      <a href="/">Home</a>
+      <span class="sep">›</span>
+      <a href="/guides">Guides</a>
+      <span class="sep">›</span>
+      <span class="current">{title}</span>
+    </nav>
+
+    <article class="post-article">
+      <header class="post-header">
+        <h1 class="post-title">{title}</h1>
+        <div class="post-meta">
+          <span>Updated July 2026</span>
+          <span>•</span>
+          <span>EV Route Guide</span>
+        </div>
+      </header>
+
+      <div class="post-content">
+        <p>
+          Installing a Level 2 home EV charger is the single best upgrade you can make as an electric vehicle owner. But before you buy a charger, you need a realistic budget. In 2026, most U.S. homeowners spend between <strong>$800 and $2,500</strong> for a complete Level 2 installation, though complex jobs can exceed $4,000. This guide breaks down every line item so you can plan accurately.
+        </p>
+
+        <h2>What Drives the Total Cost?</h2>
+        <p>
+          A home EV charger installation is not a single purchase. It is a project with four main cost categories: the charging unit itself, electrical materials, labor, and permits. Depending on your garage layout and electrical panel, you may also need a panel upgrade or a long wire run, which adds significantly to the price.
+        </p>
+
+        <h3>Electrician Labor</h3>
+        <p>
+          Licensed electrician rates vary by region. In 2026, expect <strong>$75 to $150 per hour</strong>. A straightforward installation—mounting a charger within a few feet of your electrical panel—takes 2 to 4 hours. If the electrician must run conduit 50 feet or more, trench outdoors, or navigate a finished basement, labor can stretch to 8 hours or more.
+        </p>
+
+        <h3>Permits and Inspections</h3>
+        <p>
+          Almost every jurisdiction requires an electrical permit for a new 240-volt circuit. Permit fees range from <strong>$50 to $300</strong>. Some areas also require a separate inspection fee. While it is tempting to skip permitting, doing so can void your homeowner's insurance and create safety hazards.
+        </p>
+
+        <h3>Materials</h3>
+        <p>
+          Materials include wire (typically 6/3 or 4/3 AWG Romex or THHN in conduit), a dedicated breaker, junction boxes, and mounting hardware. For a short run, materials cost <strong>$150 to $400</strong>. Long runs, aluminum wire upgrades, or outdoor-rated conduit push this closer to $600.
+        </p>
+
+        <h3>The Charger Unit</h3>
+        <p>
+          Level 2 chargers range from <strong>$350 for a basic 32-amp unit</strong> to <strong>$900 for a 48-amp smart charger</strong> with Wi-Fi, scheduling, and power-sharing. Premium brands with rugged outdoor enclosures or UL-certified models cost more but last longer and carry better warranties.
+        </p>
+
+        <h2>Cost by Amperage</h2>
+        <p>
+          The amperage of your charger determines how fast your vehicle charges and what wiring gauge your electrician must install. Higher amperage means faster charging, but also thicker wire, larger breakers, and sometimes a panel upgrade.
+        </p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Charger Amperage</th>
+              <th>Breaker Needed</th>
+              <th>Wire Gauge</th>
+              <th>Typical Labor + Materials</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>32A (7.7 kW)</td>
+              <td>40A</td>
+              <td>8 AWG</td>
+              <td>$600 – $1,200</td>
+            </tr>
+            <tr>
+              <td>40A (9.6 kW)</td>
+              <td>50A</td>
+              <td>6 AWG</td>
+              <td>$700 – $1,500</td>
+            </tr>
+            <tr>
+              <td>48A (11.5 kW)</td>
+              <td>60A</td>
+              <td>6 AWG</td>
+              <td>$800 – $1,800</td>
+            </tr>
+            <tr>
+              <td>56A–80A (13–19 kW)</td>
+              <td>70A–100A</td>
+              <td>4 AWG or 3 AWG</td>
+              <td>$1,200 – $3,000+</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          For most EV owners, a 40-amp or 48-amp charger offers the best balance of speed and installation cost. A 32-amp charger is perfectly adequate for overnight charging if your daily commute is under 50 miles.
+        </p>
+
+        <h2>When You Need a Panel Upgrade</h2>
+        <p>
+          If your electrical panel has no open breaker slots, or if its total service capacity (commonly 100 amps) is already heavily loaded, your electrician will recommend a panel upgrade or a service increase to 200 amps. This is the biggest single cost driver in EV charger installation.
+        </p>
+        <p>
+          Panel upgrades typically cost <strong>$1,500 to $3,500</strong>, depending on your utility's requirements, the distance from the meter, and whether the service line itself must be replaced. In older homes with fused panels or outdated wiring, costs can climb higher. If you are also adding solar or planning a second EV, upgrading to 200 amps now saves money long-term.
+        </p>
+
+        <div class="warning-box">
+          <strong>Warning:</strong> Never let an unlicensed installer add a double-tap or unlisted adapter to squeeze a breaker into a full panel. It is a fire risk and will fail inspection.
+        </div>
+
+        <h2>DIY vs. Professional Installation</h2>
+        <p>
+          A small number of homeowners consider a DIY installation to save on labor. If you are a licensed electrician, this is straightforward. If you are not, the risks outweigh the savings. Mistakes with 240-volt circuits can cause fires, electrocution, or vehicle damage. Most charger manufacturers void their warranty if the unit is not installed by a licensed professional.
+        </p>
+        <p>
+          The one exception is a plug-in Level 2 charger. If you already have a properly installed 240-volt outlet—such as a NEMA 14-50—you can mount the charger yourself and simply plug it in. For a deeper comparison of hardwired and plug-in setups, see our guide on <a href="/guides/hardwired-vs-plug-in-charger">hardwired vs. plug-in chargers</a>.
+        </p>
+
+        <h2>Rebates and Tax Credits</h2>
+        <p>
+          The federal Alternative Fuel Vehicle Refueling Property Credit covers <strong>30% of the cost</strong> of the charger and installation, up to <strong>$1,000</strong> for residential properties. This credit applies to both the hardware and the electrician's labor, including any panel upgrade directly required for the charger.
+        </p>
+        <p>
+          In addition, many utilities and state governments offer rebates ranging from <strong>$200 to $750</strong>. California's Clean Vehicle Rebate Project, New York's Charge Ready program, and utility rebates from Duke Energy, PG&E, and Con Edison are just a few examples. Always check your utility's website before starting the project—you may need pre-approval.
+        </p>
+
+        <h2>Total Cost Ranges by Installation Type</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Scenario</th>
+              <th>Total Cost (Before Credits)</th>
+              <th>Net Cost After 30% Credit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Simple install near panel, 40A charger</td>
+              <td>$900 – $1,600</td>
+              <td>$630 – $1,120</td>
+            </tr>
+            <tr>
+              <td>Moderate run + 48A smart charger</td>
+              <td>$1,400 – $2,200</td>
+              <td>$980 – $1,540</td>
+            </tr>
+            <tr>
+              <td>Long run / outdoor trench + 60A</td>
+              <td>$2,000 – $3,500</td>
+              <td>$1,400 – $2,450</td>
+            </tr>
+            <tr>
+              <td>With 200A panel upgrade</td>
+              <td>$3,500 – $5,500</td>
+              <td>$2,450 – $3,850</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="tip-box">
+          <strong>Tip:</strong> Get three quotes from licensed electricians. Ask each to itemize labor, materials, permits, and charger costs so you can compare apples to apples. The lowest bid is not always the best—check reviews, licensing status, and whether the quote includes permit pulling.
+        </div>
+
+        <h2>Final Thoughts</h2>
+        <p>
+          Installing a home EV charger is an investment that pays off in convenience, lower electricity rates, and higher home resale value. By understanding the cost components up front, you can budget accurately, qualify for credits, and avoid surprise charges. Start with a clear-eyed assessment of your electrical panel, get multiple bids, and take advantage of every rebate you qualify for.
+        </p>
+      </div>
+    </article>
+  </div>
+</BaseLayout>

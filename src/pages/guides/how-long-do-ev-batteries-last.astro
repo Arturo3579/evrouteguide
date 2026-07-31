@@ -1,0 +1,184 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "How Long Do EV Batteries Last?";
+const description = "EV batteries typically last 8-15 years with modest degradation. Learn what real-world data shows, how warranties protect you, what factors accelerate wear, and how much replacement costs if you're out of coverage.";
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Guides", url: "/guides" },
+  { name: title, url: "/guides/how-long-do-ev-batteries-last" }
+];
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": title,
+  "description": description,
+  "author": { "@type": "Organization", "name": "EV Route Guide" },
+  "publisher": { "@type": "Organization", "name": "EV Route Guide", "logo": { "@type": "ImageObject", "url": "https://www.evrouteguide.com/images/logo.svg" } },
+  "datePublished": "2026-07-31",
+  "dateModified": "2026-07-31"
+};
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.evrouteguide.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://www.evrouteguide.com/guides" },
+    { "@type": "ListItem", "position": 3, "name": title, "item": "https://www.evrouteguide.com/guides/how-long-do-ev-batteries-last" }
+  ]
+};
+---
+<BaseLayout title={title} description={description} breadcrumbs={breadcrumbs}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} slot="head" />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} slot="head" />
+
+  <div class="page-content container-narrow">
+    <nav class="breadcrumbs" aria-label="breadcrumb">
+      <a href="/">Home</a>
+      <span class="sep">›</span>
+      <a href="/guides">Guides</a>
+      <span class="sep">›</span>
+      <span class="current">{title}</span>
+    </nav>
+
+    <article class="post-article">
+      <header class="post-header">
+        <h1 class="post-title">{title}</h1>
+        <div class="post-meta">
+          <span>Updated July 2026</span>
+          <span>•</span>
+          <span>EV Route Guide</span>
+        </div>
+      </header>
+
+      <div class="post-content">
+        <p>
+          One of the most common questions from prospective EV buyers is also one of the most important: <strong>how long will the battery last?</strong> The good news is that modern EV batteries are engineered to outlast the typical ownership period, with most drivers seeing only modest capacity loss over a decade of use. In this guide, we break down real-world degradation data, manufacturer warranties, the factors that accelerate wear, and what battery replacement actually costs if you find yourself outside warranty coverage.
+        </p>
+
+        <h2>What Real-World Data Actually Shows</h2>
+        <p>
+          Unlike the anxious speculation common in early EV forums, large-scale data sets now paint a clear picture of battery longevity. According to aggregated fleet data from <strong>Geotab</strong> covering over 6,000 vehicles across multiple brands, the average EV battery degrades about <strong>2.3% per year</strong> under normal conditions. That means a vehicle starting with 300 miles of range would still offer roughly 240 miles after ten years — more than enough for daily commuting.
+        </p>
+        <p>
+          Tesla’s own transparency reports, drawing from its global fleet, suggest an even slower curve for newer chemistries. Vehicles with lithium iron phosphate (LFP) cells, such as the base Model 3 and Model Y, show markedly lower degradation rates than early nickel-cobalt-aluminum packs. A 2023 study by <strong>Recurrent Auto</strong> analyzing over 12,000 vehicles found that high-mileage Teslas (150,000+ miles) retained 85-90% of original capacity, provided they were not routinely exposed to extreme heat or exclusively fast-charged.
+        </p>
+        <p>
+          Nissan Leafs provide a useful cautionary tale. Because the first two generations used passive air cooling, batteries in hot climates (Arizona, Texas) degraded significantly faster — some early models lost 20-30% capacity within five years. This underscores that battery longevity is not uniform; thermal management and chemistry matter enormously.
+        </p>
+
+        <h2>Manufacturer Battery Warranties Explained</h2>
+        <p>
+          Federal regulations in the United States require manufacturers to warranty EV batteries for at least <strong>8 years or 100,000 miles</strong>. Most brands have matched or exceeded this baseline. The warranty typically guarantees that the battery will retain a minimum percentage of its original capacity — often 70% — and covers defects in materials and workmanship.
+        </p>
+        <p>
+          It is important to read the fine print. Some warranties distinguish between "capacity retention" guarantees and general defect coverage. A battery that degrades to 72% naturally may not qualify for replacement under all policies. Additionally, warranties can be voided by accident damage, unauthorized modifications, or failure to follow software update schedules.
+        </p>
+
+        <h3>Battery Warranty Comparison by Brand</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Brand</th>
+                <th>Warranty Term</th>
+                <th>Capacity Guarantee</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Tesla</td>
+                <td>8 yr / 120,000–150,000 mi</td>
+                <td>70% retention</td>
+                <td>Long range packs get higher mileage limits</td>
+              </tr>
+              <tr>
+                <td>Ford</td>
+                <td>8 yr / 100,000 mi</td>
+                <td>70% retention</td>
+                <td>Mustang Mach-E and F-150 Lightning</td>
+              </tr>
+              <tr>
+                <td>Hyundai / Kia</td>
+                <td>10 yr / 100,000 mi</td>
+                <td>70% retention</td>
+                <td>One of the longest standard warranties</td>
+              </tr>
+              <tr>
+                <td>Chevrolet</td>
+                <td>8 yr / 100,000 mi</td>
+                <td>60% retention (Bolt)</td>
+                <td>Equinox EV and Blazer EV match 8/100k</td>
+              </tr>
+              <tr>
+                <td>BMW</td>
+                <td>8 yr / 100,000 mi</td>
+                <td>70% retention</td>
+                <td>i4, iX, and i5 included</td>
+              </tr>
+              <tr>
+                <td>Rivian</td>
+                <td>8 yr / 175,000 mi</td>
+                <td>70% retention</td>
+                <td>Highest mileage cap currently offered</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>Factors That Accelerate Battery Degradation</h2>
+        <p>
+          While EV batteries are designed to be durable, certain behaviors and environments measurably shorten their lifespan. Understanding these factors helps owners make small adjustments that compound into meaningful longevity gains.
+        </p>
+
+        <h3>Frequent DC Fast Charging</h3>
+        <p>
+          DC fast charging is convenient on road trips, but repeated high-current sessions generate internal heat and can accelerate lithium plating. A 2022 study by the <strong>National Renewable Energy Laboratory (NREL)</strong> found that EVs fast-charged exclusively degraded roughly 10% faster over eight years than those primarily charged at home on Level 2. The advice is not to avoid fast charging — it is to use it when needed and rely on slower home charging for daily routines.
+        </p>
+
+        <h3>Extreme Heat and Cold</h3>
+        <p>
+          High ambient temperatures increase the rate of unwanted chemical reactions inside the pack. Vehicles with active liquid cooling (Tesla, GM, Ford, Hyundai) fare far better than those with passive air cooling (early Nissan Leafs). On the flip side, extreme cold temporarily reduces range but does not permanently degrade the battery unless the vehicle is left unplugged at very low states of charge for extended periods.
+        </p>
+
+        <h3>Deep Discharges and 100% Charging</h3>
+        <p>
+          Lithium-ion cells are stressed when kept at 0% or 100% state of charge for long durations. Most manufacturers build in top-and-bottom buffers — the "100%" you see on the dashboard is not the true chemical maximum — but routinely charging to 100% and letting the car sit, or running the pack down to near-empty repeatedly, still contributes to faster calendar aging.
+        </p>
+
+        <div class="info-box">
+          <strong>Key Takeaway:</strong> For daily use, set your charge limit to 80-90% and plug in before the battery drops below 20%. Reserve 100% charges for days when you genuinely need the extra range.
+        </div>
+
+        <h2>How to Maximize Your EV Battery Life</h2>
+        <ul>
+          <li><strong>Use Level 2 home charging</strong> as your default; treat DC fast charging as a road-trip tool.</li>
+          <li><strong>Precondition</strong> the cabin and battery while still plugged in during hot or cold weather.</li>
+          <li><strong>Store the vehicle plugged in</strong> with a charge limit set if leaving it unused for weeks.</li>
+          <li><strong>Follow software updates</strong> that often include improved thermal management algorithms.</li>
+          <li><strong>Garage park when possible</strong> to minimize exposure to temperature extremes.</li>
+        </ul>
+
+        <h2>What Does Battery Replacement Cost?</h2>
+        <p>
+          If your battery fails outside warranty, replacement is expensive — but not as catastrophic as urban myths suggest. Costs vary widely by vehicle size, chemistry, and whether you use a dealership or an independent EV repair shop.
+        </p>
+        <p>
+          For mainstream EVs such as the Nissan Leaf or Chevrolet Bolt, out-of-warranty pack replacements typically run <strong>$6,000 to $10,000</strong> including labor. For larger vehicles with bigger packs, such as the Tesla Model S/X or Ford F-150 Lightning, costs can range from <strong>$12,000 to $20,000+</strong> at a service center. However, several trends are softening the blow: third-party remanufactured packs, modular repairs (replacing only faulty modules rather than the entire pack), and a growing network of independent EV mechanics.
+        </p>
+        <p>
+          As battery production scales, prices per kilowatt-hour continue to fall. By 2026, BloombergNEF reports average pack prices under <strong>$115/kWh</strong>, down from over $1,100/kWh in 2010. That trajectory suggests replacement costs will become increasingly manageable over the vehicle’s potential 15- to 20-year lifespan.
+        </p>
+
+        <div class="tip-box">
+          <strong>Bottom Line:</strong> For the vast majority of owners, battery degradation is a slow, predictable process that will not materially impact daily driving within the first 10-15 years. Warranties cover most worst-case scenarios, and replacement costs — while not cheap — are moving in the right direction.
+        </div>
+
+        <h2>Related Guides</h2>
+        <p>
+          Looking for the full cost picture? See our guides on the <a href="/guides/hidden-costs-of-evs">hidden costs of EVs</a>, whether <a href="/guides/ev-insurance-more-expensive">EV insurance is more expensive</a>, and how <a href="/guides/ev-depreciation">EV depreciation</a> affects long-term value.
+        </p>
+      </div>
+    </article>
+  </div>
+</BaseLayout>

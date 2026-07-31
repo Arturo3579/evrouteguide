@@ -1,0 +1,187 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "How to Install an EV Charger in an Apartment or Rental";
+const description = "Practical guide for renters and condo owners on EV charger installation rights, landlord negotiation, Level 1 and shared Level 2 options, and state right-to-charge laws.";
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Guides", url: "/guides" },
+  { name: title, url: "/guides/install-charger-apartment" }
+];
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": title,
+  "description": description,
+  "author": { "@type": "Organization", "name": "EV Route Guide" },
+  "publisher": { "@type": "Organization", "name": "EV Route Guide", "logo": { "@type": "ImageObject", "url": "https://www.evrouteguide.com/images/logo.svg" } },
+  "datePublished": "2026-07-31",
+  "dateModified": "2026-07-31"
+};
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": breadcrumbs.map((b, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "name": b.name,
+    "item": `https://www.evrouteguide.com${b.url}`
+  }))
+};
+---
+<BaseLayout title={title} description={description} breadcrumbs={breadcrumbs}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} slot="head" />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} slot="head" />
+
+  <div class="page-content container-narrow">
+    <nav class="breadcrumbs" aria-label="breadcrumb">
+      <a href="/">Home</a>
+      <span class="sep">›</span>
+      <a href="/guides">Guides</a>
+      <span class="sep">›</span>
+      <span class="current">{title}</span>
+    </nav>
+
+    <article class="post-article">
+      <header class="post-header">
+        <h1 class="post-title">{title}</h1>
+        <div class="post-meta">
+          <span>Updated July 2026</span>
+          <span>•</span>
+          <span>EV Route Guide</span>
+        </div>
+      </header>
+
+      <div class="post-content">
+        <p>
+          Living in an apartment or rented condo does not mean you are stuck with public charging. While home installation is more complicated when you do not own the building, millions of renters across the United States successfully charge their EVs every night. This guide explains your legal rights, practical options, and negotiation strategies so you can power up without owning a garage.
+        </p>
+
+        <h2>Know Your Legal Rights</h2>
+        <p>
+          In the United States, landlord-tenant law varies by state, and EV charging access is a rapidly evolving area. Some states have explicit "right to charge" laws that prevent landlords and HOAs from unreasonably refusing a tenant's request to install a charger at the tenant's own expense. Other states offer no such protection, leaving negotiations entirely up to you.
+        </p>
+        <p>
+          Even in states without dedicated EV laws, the federal Fair Housing Act and the Americans with Disabilities Act can sometimes be invoked if charging access is tied to a disability-related need, though this is a narrow path. In most cases, your best leverage is a polite, well-documented proposal that addresses the landlord's real concerns: liability, cost, and aesthetics.
+        </p>
+
+        <h3>States with Strong Right-to-Charge Laws</h3>
+        <p>
+          As of 2026, the following states and territories have the strongest statutory protections for renters and condo owners seeking EV charging:
+        </p>
+        <ul>
+          <li><strong>California:</strong> Civil Code §4745 prohibits HOAs and landlords from banning EV chargers if the tenant pays for installation and insurance. Tenants must use a licensed electrician and restore the property upon move-out.</li>
+          <li><strong>Colorado:</strong> HB13-1118 prevents HOAs from outright bans and establishes a clear application process.</li>
+          <li><strong>Florida:</strong> Statute 718.113 gives condo owners the right to install chargers in limited common parking areas, subject to association rules.</li>
+          <li><strong>Oregon:</strong> ORS 91.225 prevents landlords from unreasonably denying installation if the tenant covers costs.</li>
+          <li><strong>Virginia:</strong> Property owners' associations cannot prohibit EV charging equipment outright, though they may regulate location and safety standards.</li>
+          <li><strong>Washington:</strong> RCW 64.38.060 grants homeowners and tenants the right to install Level 1 or Level 2 chargers at their own expense.</li>
+        </ul>
+        <p>
+          If you live outside these states, you are not out of luck—you simply face a negotiation rather than a legal entitlement. Document every request in writing and keep copies of all responses.
+        </p>
+
+        <h2>Charging Options for Renters</h2>
+        <p>
+          Not every renter needs a dedicated Level 2 installation. Depending on your commute, parking setup, and electrical access, one of these four options will usually work.
+        </p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Option</th>
+              <th>Speed</th>
+              <th>Typical Cost</th>
+              <th>Best For</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Level 1 (120V regular outlet)</td>
+              <td>3–5 miles per hour</td>
+              <td>$0–$150 (cord only)</td>
+              <td>Short commutes, overnight parking</td>
+            </tr>
+            <tr>
+              <td>Existing shared Level 2</td>
+              <td>20–30 miles per hour</td>
+              <td>Pay-per-use or monthly fee</td>
+              <td>Buildings with pre-installed chargers</td>
+            </tr>
+            <tr>
+              <td>Landlord-installed Level 2</td>
+              <td>20–30 miles per hour</td>
+              <td>$0–$500 tenant contribution</td>
+              <td>Long-term leases, proactive landlords</td>
+            </tr>
+            <tr>
+              <td>Public / workplace charging</td>
+              <td>Varies widely</td>
+              <td>Free to $0.40/kWh</td>
+              <td>Urban areas, office parks with stations</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Level 1 from a Regular Outlet</h3>
+        <p>
+          If you have a dedicated parking spot near an exterior outlet, Level 1 charging may cover your needs. A standard 120-volt outlet adds roughly 3 to 5 miles of range per hour. Over a 10-hour night, that is 30 to 50 miles—enough for the average U.S. commute of 27 miles round-trip. You will need a heavy-duty outdoor extension cord rated for continuous use, or the portable charging cord that came with your vehicle.
+        </p>
+        <p>
+          Before plugging in, verify the outlet is on a dedicated circuit, not shared with hallway lights or laundry machines. Ask your landlord in writing for permission. If the outlet is on a common-area meter, offer to reimburse the building for electricity or propose a sub-meter.
+        </p>
+
+        <h3>Shared Level 2 in Apartment Buildings</h3>
+        <p>
+          A growing number of apartment complexes now install shared Level 2 stations in parking areas. These are typically networked chargers managed by companies like ChargePoint, EV Connect, or Blink. You pay per kilowatt-hour or per hour of connection. The main downside is availability: if there are 200 units and 4 chargers, you may face competition on busy evenings. Some buildings assign reserved time slots or priority for EV-lease addendums.
+        </p>
+
+        <h2>Negotiating with Your Landlord or HOA</h2>
+        <p>
+          The key to approval is removing risk from the landlord's shoulders. Approach the conversation with a formal proposal that includes:
+        </p>
+        <ul>
+          <li>A licensed electrician's estimate for the work</li>
+          <li>Proof of liability insurance or a rider on your renter's policy</li>
+          <li>An agreement to restore the property upon move-out</li>
+          <li>A commitment to cover all costs, including permits and inspection</li>
+          <li>Photos or diagrams showing exactly where the outlet or charger will go</li>
+        </ul>
+        <p>
+          Emphasize that EV charging is a competitive amenity. A 2025 National Apartment Association survey found that 62% of renters under 40 consider EV charging a "must-have" or "strongly preferred" amenity. By allowing your installation, your landlord is making a small investment in marketability—often at zero cost to them.
+        </p>
+        <p>
+          If the landlord refuses outright, ask for the reason in writing. In states with right-to-charge laws, a written refusal is required and must be justified by specific safety or structural concerns. You can then address those concerns directly with revised plans.
+        </p>
+
+        <div class="tip-box">
+          <strong>Tip:</strong> Offer to sign a lease addendum that makes you responsible for the charger, its maintenance, and any electrical costs. Landlords are far more likely to say yes when liability is clearly off their plate.
+        </div>
+
+        <h2>Apartment Buildings with Pre-Installed Chargers</h2>
+        <p>
+          Newer apartment construction is increasingly EV-ready. Look for buildings advertising "EV charging" or "EV-ready parking." EV-ready means the electrical conduit and capacity are in place, but a charger may not yet be installed. This is still valuable: the hard infrastructure work is done, and adding a unit is cheap and fast.
+        </p>
+        <p>
+          When touring apartments, ask specific questions: How many chargers serve how many units? Is parking assigned or first-come, first-served? Is the cost bundled into rent or billed separately? These details matter more than the marketing headline.
+        </p>
+
+        <h2>Workplace and Public Charging as Backup</h2>
+        <p>
+          Even with a home solution, workplace charging is a powerful supplement. Many employers offer free Level 2 charging as an employee perk. If your office has chargers, you may only need home charging on weekends. Combine that with occasional public DC fast charging for road trips, and you can comfortably own an EV as a renter with no home charger at all.
+        </p>
+        <p>
+          Use apps like PlugShare, ChargePoint, and Electrify America to map stations near your apartment, workplace, and regular errands. Filter for stations with good reliability ratings—there is nothing worse than arriving at a broken charger with 10% battery.
+        </p>
+
+        <div class="info-box">
+          <strong>Remember:</strong> If you are considering a plug-in charger for a rental, see our comparison of <a href="/guides/hardwired-vs-plug-in-charger">hardwired vs. plug-in chargers</a> to understand why plug-in is usually the better fit for temporary installations.
+        </div>
+
+        <h2>Final Thoughts</h2>
+        <p>
+          Renting and driving electric are not mutually exclusive. Start with the simplest solution—Level 1 from an existing outlet—and escalate to Level 2 or shared charging only if your mileage demands it. Know your state's laws, negotiate in good faith, and always get permission in writing. With a little persistence, you can wake up to a full battery every morning, even if you do not own the roof over your parking spot.
+        </p>
+      </div>
+    </article>
+  </div>
+</BaseLayout>

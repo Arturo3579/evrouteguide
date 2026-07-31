@@ -1,0 +1,172 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Cost to Charge an EV at Home (Complete Guide)";
+const description = "Learn exactly how much it costs to charge an electric car at home with real examples, time-of-use rate math, and monthly cost estimates for popular EVs.";
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Guides", url: "/guides" },
+  { name: "Cost to Charge EV at Home", url: "/guides/cost-to-charge-ev-at-home" }
+];
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": title,
+  "description": description,
+  "author": { "@type": "Organization", "name": "EV Route Guide" },
+  "publisher": { "@type": "Organization", "name": "EV Route Guide", "logo": { "@type": "ImageObject", "url": "https://www.evrouteguide.com/images/logo.svg" } },
+  "datePublished": "2026-07-31",
+  "dateModified": "2026-07-31"
+};
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": breadcrumbs.map((b, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "name": b.name,
+    "item": `https://www.evrouteguide.com${b.url}`
+  }))
+};
+---
+<BaseLayout title={title} description={description} breadcrumbs={breadcrumbs}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} slot="head" />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} slot="head" />
+
+  <div class="page-content container-narrow">
+    <nav class="breadcrumbs" aria-label="breadcrumb">
+      <a href="/">Home</a>
+      <span class="sep">›</span>
+      <a href="/guides">Guides</a>
+      <span class="sep">›</span>
+      <span class="current">{title}</span>
+    </nav>
+
+    <article class="post-article">
+      <header class="post-header">
+        <h1 class="post-title">{title}</h1>
+        <div class="post-meta">
+          <span>Updated July 2026</span>
+          <span>•</span>
+          <span>EV Route Guide</span>
+        </div>
+      </header>
+
+      <div class="post-content">
+        <p>One of the biggest advantages of owning an electric vehicle is cheap, convenient fueling at home. But how much does it actually cost? The answer depends on your local electricity rate, the size of your EV’s battery, and when you charge. This guide breaks down the math in plain terms and gives you real dollar amounts for the most popular vehicles on the road.</p>
+
+        <h2>Understanding Kilowatt-Hours</h2>
+        <p>Electricity is sold by the kilowatt-hour, or kWh. Think of a kWh as the electrical equivalent of a gallon of gasoline. Your utility bill shows a price per kWh, usually between $0.12 and $0.30 depending on your state and provider. To know what it costs to charge your EV, you multiply the battery capacity in kWh by your electricity rate.</p>
+        <p>For example, a battery with 60 kWh of usable capacity at $0.15 per kWh costs 60 × $0.15 = $9.00 to charge from empty to full. Because most drivers do not run their battery to zero every day, a typical daily top-up is smaller and even cheaper.</p>
+
+        <h2>Level 1 vs Level 2 Cost Difference</h2>
+        <p>Both Level 1 (standard 120-volt outlet) and Level 2 (240-volt home charger) draw electricity from the same utility meter. The <em>energy</em> cost per mile is identical. The difference is speed and efficiency.</p>
+        <p>Level 1 charging is slower and slightly less efficient because the car runs more onboard systems per hour of charging. Over a full charge cycle, you may lose 10 to 15 percent more energy to heat and overhead compared to Level 2. For a 60 kWh battery, that means Level 1 might pull 68 kWh from the wall to deliver 60 kWh to the battery, while Level 2 might pull 64 kWh. At $0.15 per kWh, the extra cost is roughly 60 cents per charge, or about $15 per year for a daily commuter.</p>
+        <p>The bigger cost factor is installation. A Level 2 home charger requires a 240-volt circuit, which costs $500 to $2,000 to install depending on your electrical panel location. Many utilities and states offer rebates that cover part or all of that cost. Check the Database of State Incentives for Renewables and Efficiency before paying out of pocket.</p>
+
+        <h2>Time-of-Use Rate Plans</h2>
+        <p>Many utilities offer time-of-use (TOU) plans that make electricity cheaper at night and more expensive during afternoon peak hours. If you can schedule charging for 11 PM to 6 AM, you may pay $0.08 to $0.12 per kWh instead of $0.25 or more during the day.</p>
+        <p>For example, Pacific Gas and Electric in California offers an EV-specific rate with off-peak pricing around $0.12 per kWh and peak pricing above $0.50 per kWh. Charging exclusively off-peak can cut your fueling costs by 50 percent or more compared to a flat-rate plan. Almost every EV and modern smart charger can be programmed to start charging automatically at a set time.</p>
+
+        <h2>Real Examples: Cost Per Charge and Per Mile</h2>
+        <p>The table below shows charging costs for three popular EVs at average and off-peak electricity rates. These figures assume charging from 10 percent to 100 percent, which represents a full cycle but not daily behavior.</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Vehicle</th>
+              <th>Usable Battery</th>
+              <th>EPA Range</th>
+              <th>Cost to Full (avg $0.15/kWh)</th>
+              <th>Cost to Full (off-peak $0.10/kWh)</th>
+              <th>Cost per Mile</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Tesla Model 3 RWD</td>
+              <td>57.5 kWh</td>
+              <td>272 mi</td>
+              <td>$8.63</td>
+              <td>$5.75</td>
+              <td>$0.032</td>
+            </tr>
+            <tr>
+              <td>Chevrolet Bolt EUV</td>
+              <td>65 kWh</td>
+              <td>247 mi</td>
+              <td>$9.75</td>
+              <td>$6.50</td>
+              <td>$0.039</td>
+            </tr>
+            <tr>
+              <td>Ford F-150 Lightning (Standard)</td>
+              <td>98 kWh</td>
+              <td>230 mi</td>
+              <td>$14.70</td>
+              <td>$9.80</td>
+              <td>$0.064</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Monthly Cost Estimates</h2>
+        <p>Most Americans drive between 800 and 1,200 miles per month. The table below estimates your added electricity bill based on that mileage and the vehicles above. These numbers assume an average rate of $0.15 per kWh without time-of-use savings.</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Monthly Mileage</th>
+              <th>Tesla Model 3</th>
+              <th>Chevy Bolt EUV</th>
+              <th>F-150 Lightning</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>800 miles</td>
+              <td>$26</td>
+              <td>$31</td>
+              <td>$51</td>
+            </tr>
+            <tr>
+              <td>1,000 miles</td>
+              <td>$32</td>
+              <td>$39</td>
+              <td>$64</td>
+            </tr>
+            <tr>
+              <td>1,200 miles</td>
+              <td>$38</td>
+              <td>$47</td>
+              <td>$77</td>
+            </tr>
+            <tr>
+              <td>1,500 miles</td>
+              <td>$48</td>
+              <td>$58</td>
+              <td>$96</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>For comparison, a gasoline car averaging 30 miles per gallon at $3.40 per gallon costs $113 per month to drive 1,000 miles. An efficient 50-mpg hybrid still costs $68 per month. EVs are cheaper to fuel in nearly every scenario, and the savings increase in states with low electricity rates like Washington, Idaho, and Louisiana.</p>
+
+        <h2>Other Costs to Consider</h2>
+        <p>Home charging is not entirely free beyond the electrons. You may need to install a Level 2 charger, which ranges from $350 for a basic unit to $800 for a smart Wi-Fi-enabled model with load balancing. Installation by a licensed electrician adds $400 to $1,500 depending on how far your garage is from the electrical panel.</p>
+        <p>Some utilities charge higher monthly base fees for EV rate plans. Make sure the per-kWh savings outweigh any increased fixed charges. In most cases, they do. Another hidden benefit: if you install solar panels, your marginal cost to charge an EV can drop to zero during sunny months, something no gas station can match.</p>
+
+        <div class="info-box">
+          <h3>Pro Tip: Use Your EV’s Scheduled Charging</h3>
+          <p>Every major EV sold today includes scheduled departure or scheduled charging in its smartphone app or dashboard. Set your car to charge after midnight if your utility offers time-of-use rates. This single setting can save $200 to $400 per year with zero effort. If you are unsure which rate plan is best, call your utility’s EV hotline; most large providers now have dedicated departments for electric vehicle owners.</p>
+        </div>
+
+        <h2>How Public Charging Compares</h2>
+        <p>Home charging is usually the cheapest option, but occasional public charging is unavoidable on road trips. Level 2 public stations often charge $0.20 to $0.35 per kWh, while DC fast chargers range from $0.35 to $0.60 per kWh. At $0.50 per kWh, a full charge for a Tesla Model 3 costs about $29, still cheaper than a tank of gas but three times more expensive than home charging.</p>
+        <p>If you cannot install home charging, rely on workplace Level 2 stations or public networks. In that case, your fueling costs will be higher, but still generally lower than gasoline. For a deep dive into charging speeds and when to use each type, see our <a href="/guides/level-1-vs-level-2-vs-dc-fast">Level 1 vs Level 2 vs DC Fast Charging guide</a>.</p>
+
+        <h2>Summary</h2>
+        <p>Charging an EV at home costs roughly one-third to one-half as much as fueling a gasoline car, and the gap widens if you use off-peak electricity rates or solar panels. For a typical driver covering 1,000 miles per month, expect an electricity bill increase of $30 to $70. That is a small price for the convenience of never visiting a gas station again.</p>
+      </div>
+    </article>
+  </div>
+</BaseLayout>

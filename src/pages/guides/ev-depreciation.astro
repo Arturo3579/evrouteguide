@@ -1,0 +1,184 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "EV Depreciation: What Every Buyer Should Know";
+const description = "EVs depreciate faster than average in early years, but the curve is flattening. See 3- and 5-year resale values by model, understand how tax credits and battery health affect depreciation, and learn which EVs hold value best.";
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Guides", url: "/guides" },
+  { name: title, url: "/guides/ev-depreciation" }
+];
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": title,
+  "description": description,
+  "author": { "@type": "Organization", "name": "EV Route Guide" },
+  "publisher": { "@type": "Organization", "name": "EV Route Guide", "logo": { "@type": "ImageObject", "url": "https://www.evrouteguide.com/images/logo.svg" } },
+  "datePublished": "2026-07-31",
+  "dateModified": "2026-07-31"
+};
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.evrouteguide.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://www.evrouteguide.com/guides" },
+    { "@type": "ListItem", "position": 3, "name": title, "item": "https://www.evrouteguide.com/guides/ev-depreciation" }
+  ]
+};
+---
+<BaseLayout title={title} description={description} breadcrumbs={breadcrumbs}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} slot="head" />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} slot="head" />
+
+  <div class="page-content container-narrow">
+    <nav class="breadcrumbs" aria-label="breadcrumb">
+      <a href="/">Home</a>
+      <span class="sep">›</span>
+      <a href="/guides">Guides</a>
+      <span class="sep">›</span>
+      <span class="current">{title}</span>
+    </nav>
+
+    <article class="post-article">
+      <header class="post-header">
+        <h1 class="post-title">{title}</h1>
+        <div class="post-meta">
+          <span>Updated July 2026</span>
+          <span>•</span>
+          <span>EV Route Guide</span>
+        </div>
+      </header>
+
+      <div class="post-content">
+        <p>
+          Depreciation is the single largest cost of owning any vehicle, and EVs have historically suffered sharper declines than the market average. However, the narrative is shifting. As supply chains stabilize, tax-credit rules evolve, and consumer confidence grows, some electric models now hold value comparably well to their gas counterparts. In this guide, we examine the EV depreciation curve, which models resist value loss best, and the factors that will determine your car’s worth at trade-in time.
+        </p>
+
+        <h2>How EV Depreciation Curves Compare to Gas Cars</h2>
+        <p>
+          Industry data from <strong>Edmunds</strong> and <strong>Kelley Blue Book</strong> shows that the average new vehicle loses roughly <strong>20% of its value in the first year</strong> and about <strong>40-50% by year five</strong>. EVs, until recently, were losing <strong>30-40% in year one</strong> and <strong>50-60% by year five</strong>. The reasons were straightforward: rapid technology improvement made yesterday’s EV feel obsolete, early supply gluts in certain segments flooded the used market, and range anxiety among secondhand buyers suppressed demand.
+        </p>
+        <p>
+          The gap has narrowed meaningfully since 2024. Mainstream EVs with competitive range (250+ miles) and established brand recognition — notably Tesla, Hyundai, and Ford — now depreciate closer to industry norms. The steepest depreciation is increasingly concentrated in older short-range EVs, compliance cars, and models from manufacturers with uncertain U.S. market longevity.
+        </p>
+
+        <h2>Which EVs Hold Value Best</h2>
+        <p>
+          Resale value is a function of perceived reliability, charging infrastructure access, software support, and supply discipline. The following models have consistently outperformed the EV segment average in retained value.
+        </p>
+
+        <h3>Tesla Model 3 and Model Y</h3>
+        <p>
+          Tesla’s dominant charging network and continuous over-the-air updates keep used Teslas feeling current longer than many rivals. Despite aggressive new-car pricing moves that occasionally disrupt used values, the Model 3 and Model Y remain the benchmark for EV resale strength. A 2023 Model Y Long Range with average mileage typically retains <strong>65-70% of its original MSRP after three years</strong>, which is above the EV average and roughly on par with popular gas crossovers.
+        </p>
+
+        <h3>Rivian R1T and R1S</h3>
+        <p>
+          Rivian’s limited production volume has paradoxically helped resale values. Because supply is constrained, used Rivians often command prices close to new-car MSRP in the first 18-24 months. Over the longer term, retention will depend on Rivian’s service network expansion and software roadmap, but early signs are strong.
+        </p>
+
+        <h3>Hyundai Ioniq 5 and Kia EV6</h3>
+        <p>
+          These siblings benefit from 800V fast-charging architecture, distinctive styling, and Hyundai’s broad dealer network. Their 3-year retained value now approaches <strong>60-65%</strong>, a meaningful improvement over earlier Hyundai EVs and competitive with mainstream gas SUVs in the same price bracket.
+        </p>
+
+        <h3>Models That Depreciate Faster</h3>
+        <p>
+          Vehicles with sub-200-mile range, limited fast-charging capability, or uncertain manufacturer support tend to fall hardest. Early Nissan Leafs (pre-2018), Fiat 500e, and certain compliance-focused EVs from legacy automakers can lose over <strong>70% of value in five years</strong>. If you are buying used, this is an opportunity; if you are buying new, it is a risk to weigh carefully.
+        </p>
+
+        <h2>The Impact of Tax Credits on Resale Value</h2>
+        <p>
+          The federal EV tax credit — up to <strong>$7,500</strong> for qualifying new vehicles — indirectly suppresses used values. Because a new buyer can capture that incentive, a one-year-old used EV must be priced low enough to offset the loss of the credit plus the stigma of being "pre-owned." Lease buyouts and used-EV credits (introduced in some recent legislative proposals) could partially rebalance this, but for now the credit remains a headwind for first owners.
+        </p>
+        <p>
+          Conversely, as some manufacturers hit the 200,000-unit cap or price out of eligibility, their vehicles sometimes see a stabilization in used values because the new-car discount no longer exists. This dynamic is worth tracking if you are timing a purchase or sale.
+        </p>
+
+        <h2>Battery Health as a Depreciation Factor</h2>
+        <p>
+          Unlike an engine, which is largely opaque to a buyer, an EV battery’s health is both critical and increasingly transparent. Tools such as <strong>Recurrent</strong> provide battery health reports for used EV listings, and some manufacturers now include battery health certificates in certified pre-owned programs. A battery showing 90%+ state-of-health commands a clear premium over one at 80%.
+        </p>
+        <p>
+          Sellers who can document healthy charging habits (mostly Level 2, limited fast charging, temperate climate) may justify higher asking prices. Buyers should treat battery health as a core negotiation variable, not an afterthought.
+        </p>
+
+        <h3>3-Year and 5-Year Resale Value by Model</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th>Est. 3-Year Retained Value</th>
+                <th>Est. 5-Year Retained Value</th>
+                <th>Primary Resilience Factor</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Tesla Model Y Long Range</td>
+                <td>65 – 70%</td>
+                <td>50 – 55%</td>
+                <td>Supercharger access, OTA updates</td>
+              </tr>
+              <tr>
+                <td>Tesla Model 3 RWD</td>
+                <td>60 – 65%</td>
+                <td>45 – 50%</td>
+                <td>High demand, minimal maintenance</td>
+              </tr>
+              <tr>
+                <td>Ford Mustang Mach-E</td>
+                <td>55 – 60%</td>
+                <td>40 – 45%</td>
+                <td>Ford dealer network, brand trust</td>
+              </tr>
+              <tr>
+                <td>Hyundai Ioniq 5</td>
+                <td>60 – 65%</td>
+                <td>45 – 50%</td>
+                <td>800V charging, competitive pricing</td>
+              </tr>
+              <tr>
+                <td>Rivian R1T</td>
+                <td>65 – 72%</td>
+                <td>50 – 55%</td>
+                <td>Low supply, unique segment positioning</td>
+              </tr>
+              <tr>
+                <td>Nissan Leaf (2018+ 40 kWh)</td>
+                <td>35 – 40%</td>
+                <td>20 – 25%</td>
+                <td>Charging speed limits, battery concerns</td>
+              </tr>
+              <tr>
+                <td>Chevrolet Bolt EV</td>
+                <td>40 – 45%</td>
+                <td>25 – 30%</td>
+                <td>Value pricing, discontinued model</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="info-box">
+          <strong>Key Takeaway:</strong> The EVs that hold value best are those with strong charging ecosystems, reliable battery health, and continuous software support. If resale value matters to you, prioritize models with 250+ miles of range and active manufacturer investment in post-sale service.
+        </div>
+
+        <h2>How to Protect Your EV’s Value</h2>
+        <ul>
+          <li><strong>Keep the battery between 20% and 80%</strong> for daily use to preserve state-of-health documentation.</li>
+          <li><strong>Maintain service records</strong> even though maintenance is minimal; buyers value transparency.</li>
+          <li><strong>Avoid aftermarket modifications</strong> to high-voltage systems, which can complicate warranties and scare off private buyers.</li>
+          <li><strong>Consider certified pre-owned programs</strong> when buying used; they often include battery health guarantees that improve future resale.</li>
+        </ul>
+
+        <h2>Related Guides</h2>
+        <p>
+          Dive deeper into ownership economics with our guides on <a href="/guides/how-long-do-ev-batteries-last">EV battery longevity</a>, the <a href="/guides/hidden-costs-of-evs">hidden costs of EVs</a>, and whether <a href="/guides/ev-insurance-more-expensive">EV insurance is more expensive</a>.
+        </p>
+      </div>
+    </article>
+  </div>
+</BaseLayout>

@@ -1,0 +1,166 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Hidden Costs of EVs";
+const description = "EVs save money on fuel, but ownership brings less obvious expenses. Learn about home electrical upgrades, public charging premiums, tire wear, registration fees, adapters, and how first-year EV costs compare to gas cars.";
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Guides", url: "/guides" },
+  { name: title, url: "/guides/hidden-costs-of-evs" }
+];
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": title,
+  "description": description,
+  "author": { "@type": "Organization", "name": "EV Route Guide" },
+  "publisher": { "@type": "Organization", "name": "EV Route Guide", "logo": { "@type": "ImageObject", "url": "https://www.evrouteguide.com/images/logo.svg" } },
+  "datePublished": "2026-07-31",
+  "dateModified": "2026-07-31"
+};
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.evrouteguide.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://www.evrouteguide.com/guides" },
+    { "@type": "ListItem", "position": 3, "name": title, "item": "https://www.evrouteguide.com/guides/hidden-costs-of-evs" }
+  ]
+};
+---
+<BaseLayout title={title} description={description} breadcrumbs={breadcrumbs}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} slot="head" />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} slot="head" />
+
+  <div class="page-content container-narrow">
+    <nav class="breadcrumbs" aria-label="breadcrumb">
+      <a href="/">Home</a>
+      <span class="sep">›</span>
+      <a href="/guides">Guides</a>
+      <span class="sep">›</span>
+      <span class="current">{title}</span>
+    </nav>
+
+    <article class="post-article">
+      <header class="post-header">
+        <h1 class="post-title">{title}</h1>
+        <div class="post-meta">
+          <span>Updated July 2026</span>
+          <span>•</span>
+          <span>EV Route Guide</span>
+        </div>
+      </header>
+
+      <div class="post-content">
+        <p>
+          Electric vehicles routinely win the total-cost-of-ownership debate against gasoline cars, thanks to cheaper "fuel" and minimal maintenance. But the sticker price is not the whole story. Before you buy, it pays to understand the <strong>hidden costs of EV ownership</strong> — expenses that do not show up in glossy marketing brochures but can meaningfully affect your first-year budget.
+        </p>
+
+        <h2>Home Electrical Upgrades</h2>
+        <p>
+          Charging at home on a standard 120V outlet (Level 1) is possible, but impractical for most drivers. Adding 3-5 miles of range per hour means a depleted battery can take two to three days to fully recharge. Most owners install a <strong>240V Level 2 charger</strong>, which typically delivers 25-40 miles of range per hour.
+        </p>
+        <p>
+          The cost depends on your existing electrical panel. If you have spare amperage, a licensed electrician can install a dedicated 240V outlet or hardwired station for <strong>$500 to $2,000</strong>. If your panel is near capacity — common in older homes — you may need a panel upgrade or a load-management device, pushing costs to <strong>$2,500 to $5,500</strong>. In rare cases requiring a service line upgrade from the utility, the bill can climb higher.
+        </p>
+        <p>
+          The federal EV infrastructure tax credit (IRS Form 8911) covers 30% of the equipment and installation cost up to $1,000, which softens the blow for most homeowners.
+        </p>
+
+        <h2>Public Charging Costs vs. Home Charging</h2>
+        <p>
+          Home charging is cheap. At the U.S. average residential rate of roughly <strong>$0.16 per kWh</strong> in 2026, filling a 75 kWh battery costs about $12. Public DC fast charging is a different story. Networks like Electrify America, EVgo, and Tesla Supercharger often charge <strong>$0.40 to $0.60 per kWh</strong>, depending on location and membership status. Some locations add idle fees or peak-time surcharges.
+        </p>
+        <p>
+          Relying primarily on public fast charging can erase much of the EV fuel-cost advantage. A driver who charges exclusively at public stations may spend nearly as much per mile as a hybrid driver, though still less than most non-hybrid gasoline vehicles. The ideal strategy is home charging for daily needs, with public charging reserved for road trips.
+        </p>
+
+        <h2>Tire Replacement: The Surprisingly Big One</h2>
+        <p>
+          EVs wear through tires faster than comparable gas cars for two simple reasons: <strong>weight</strong> and <strong>instant torque</strong>. A Tesla Model Y Performance weighs roughly 4,400 pounds — about 500-800 pounds more than a similarly sized BMW X3. That extra mass presses harder on the contact patch. Meanwhile, the immediate torque from an electric motor shreds tread more aggressively during spirited acceleration.
+        </p>
+        <p>
+          Real-world owner forums consistently report EV tires needing replacement every <strong>20,000 to 35,000 miles</strong>, compared with 40,000 to 60,000 miles for many gas-car tires. Because many EVs also require dedicated EV-rated tires (optimized for low rolling resistance and high load ratings), replacement sets can cost <strong>$800 to $1,600</strong> rather than the $500-$900 typical for mid-size sedans.
+        </p>
+
+        <h2>Higher Registration Fees in Some States</h2>
+        <p>
+          Because EV owners do not pay gasoline taxes — which fund road maintenance — many states have imposed <strong>supplemental EV registration fees</strong>. As of 2026, over 30 U.S. states charge EV owners an extra annual fee, ranging from <strong>$50 to $225 per year</strong>. States such as Washington, Georgia, and Wyoming have some of the highest fees. While this is still less than the average annual gasoline tax paid by a typical driver, it is a line item many first-time EV buyers overlook.
+        </p>
+
+        <h2>Adapters and Accessories</h2>
+        <p>
+          The charging landscape remains fragmented. Depending on your vehicle and travel patterns, you may need multiple adapters: J1772-to-Tesla (or vice versa), CHAdeMO for older networks, or CCS if you own a non-Tesla vehicle traveling in Tesla-dominant areas. Adapters range from <strong>$50 to $300</strong> each. Additionally, many owners buy all-weather cargo mats, center-console organizers, and home energy monitors, adding another few hundred dollars in first-year spending.
+        </p>
+
+        <h3>First-Year Hidden Costs: EV vs. Gas Car</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Expense Category</th>
+                <th>Typical EV Cost</th>
+                <th>Typical Gas Car Cost</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Home charging installation</td>
+                <td>$750 – $2,500</td>
+                <td>$0</td>
+                <td>30% federal tax credit may apply</td>
+              </tr>
+              <tr>
+                <td>Public charging (annual)</td>
+                <td>$300 – $900</td>
+                <td>N/A</td>
+                <td>Highly variable; assumes some road trips</td>
+              </tr>
+              <tr>
+                <td>Tire replacement (annual)</td>
+                <td>$400 – $800</td>
+                <td>$250 – $450</td>
+                <td>EVs wear tires ~30-50% faster</td>
+              </tr>
+              <tr>
+                <td>Registration surcharge</td>
+                <td>$50 – $225</td>
+                <td>$0</td>
+                <td>Varies widely by state</td>
+              </tr>
+              <tr>
+                <td>Adapters / accessories</td>
+                <td>$100 – $400</td>
+                <td>$50 – $150</td>
+                <td>Charging adapters, mats, organizers</td>
+              </tr>
+              <tr>
+                <td>Maintenance (annual)</td>
+                <td>$200 – $350</td>
+                <td>$600 – $900</td>
+                <td>EVs still win overall on maintenance</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="warning-box">
+          <strong>Watch Out:</strong> Many EV cost calculators assume you will charge exclusively at home at residential rates. If you live in an apartment or rely heavily on public DC fast charging, your real-world "fuel" costs may be 2-3x higher than advertised.
+        </div>
+
+        <h2>How to Minimize Hidden EV Costs</h2>
+        <ul>
+          <li><strong>Get multiple electrical quotes</strong> and ask about load-sharing devices to avoid a panel upgrade.</li>
+          <li><strong>Rotate tires every 5,000–6,000 miles</strong> and keep pressures at the manufacturer’s recommended maximum to slow wear.</li>
+          <li><strong>Join charging network membership programs</strong> (Electrify America Pass+, Tesla Supercharging non-Tesla plans) for discounted per-kWh rates.</li>
+          <li><strong>Research your state’s EV fees</strong> before budgeting; some states are reconsidering flat fees in favor of per-mile road-use charges.</li>
+        </ul>
+
+        <h2>Related Guides</h2>
+        <p>
+          Understand long-term value by reading our guides on <a href="/guides/how-long-do-ev-batteries-last">EV battery longevity</a>, <a href="/guides/ev-insurance-more-expensive">EV insurance costs</a>, and <a href="/guides/ev-depreciation">EV depreciation</a>.
+        </p>
+      </div>
+    </article>
+  </div>
+</BaseLayout>
