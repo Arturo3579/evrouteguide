@@ -1,0 +1,111 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const title = "EV vs Gas Cost Calculator";
+const description = "Calculate the real annual cost difference between owning an electric car and a gas car. Based on your driving habits, local gas prices, and electricity rates.";
+---
+
+<BaseLayout title={title} description={description}>
+  <div class="page-content">
+    <header class="page-header">
+      <h1 class="page-title">EV vs Gas Cost Calculator</h1>
+      <p class="page-lead">See exactly how much you could save (or spend) by switching to an electric vehicle. Based on real US averages and your actual driving.</p>
+    </header>
+
+    <div class="tool-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="miles-per-year">Miles driven per year</label>
+          <input type="number" id="miles-per-year" value="12000" min="1000" max="100000" step="1000" />
+        </div>
+        <div class="form-group">
+          <label for="gas-price">Gas price per gallon ($)</label>
+          <input type="number" id="gas-price" value="3.50" min="1.00" max="10.00" step="0.10" />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="electricity-rate">Electricity rate per kWh ($)</label>
+          <input type="number" id="electricity-rate" value="0.14" min="0.05" max="0.50" step="0.01" />
+        </div>
+        <div class="form-group">
+          <label for="mpg">Gas car MPG</label>
+          <input type="number" id="mpg" value="28" min="10" max="60" step="1" />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="ev-efficiency">EV efficiency (miles per kWh)</label>
+          <input type="number" id="ev-efficiency" value="3.5" min="2.0" max="5.0" step="0.1" />
+        </div>
+        <div class="form-group">
+          <label for="state-incentive">State EV incentive ($)</label>
+          <input type="number" id="state-incentive" value="0" min="0" max="10000" step="500" />
+        </div>
+      </div>
+      <button class="btn btn-primary" id="calc-btn" style="width:100%;margin-top:0.5rem;">Calculate annual cost</button>
+    </div>
+
+    <div class="tool-result" id="result-box" style="display:none;">
+      <h3>Your estimated annual cost</h3>
+      <div class="result-grid">
+        <div class="result-item">
+          <div class="label">Gas car fuel</div>
+          <div class="value" id="res-gas">—</div>
+        </div>
+        <div class="result-item">
+          <div class="label">Electric car charging</div>
+          <div class="value" id="res-ev">—</div>
+        </div>
+        <div class="result-item">
+          <div class="label">Annual savings</div>
+          <div class="value" id="res-save">—</div>
+        </div>
+        <div class="result-item">
+          <div class="label">Break-even (years)</div>
+          <div class="value" id="res-breakeven">—</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-body" style="margin-top:2rem;">
+      <h2>How we calculate this</h2>
+      <p><strong>Gas cost:</strong> (Miles driven / MPG) × Price per gallon.</p>
+      <p><strong>EV cost:</strong> (Miles driven / Miles per kWh) × Electricity rate.</p>
+      <p><strong>Savings:</strong> Gas cost − EV cost. Negative means the EV costs more to fuel (rare, but possible with very cheap gas or expensive electricity).</p>
+      <p><strong>Break-even:</strong> Rough estimate of years to recover a typical $5,000 EV price premium through fuel savings alone. Maintenance savings (EVs are cheaper) would make this faster.</p>
+
+      <div class="tip-box">
+        <strong>Tip</strong><br>
+        The average US driver saves $800–$1,200 per year on fuel alone. Add lower maintenance (no oil changes, fewer brake jobs) and the total ownership cost gap grows significantly over 5 years.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const fmt = (n) => new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(n);
+
+    document.getElementById('calc-btn').addEventListener('click', () => {
+      const miles = parseFloat(document.getElementById('miles-per-year').value) || 0;
+      const gasPrice = parseFloat(document.getElementById('gas-price').value) || 0;
+      const elecRate = parseFloat(document.getElementById('electricity-rate').value) || 0;
+      const mpg = parseFloat(document.getElementById('mpg').value) || 1;
+      const evEff = parseFloat(document.getElementById('ev-efficiency').value) || 1;
+      const incentive = parseFloat(document.getElementById('state-incentive').value) || 0;
+
+      const gasCost = (miles / mpg) * gasPrice;
+      const kWhNeeded = miles / evEff;
+      const evCost = kWhNeeded * elecRate;
+      const savings = gasCost - evCost;
+      const breakeven = savings > 0 ? (5000 - incentive) / savings : Infinity;
+
+      document.getElementById('res-gas').textContent = fmt(gasCost);
+      document.getElementById('res-ev').textContent = fmt(evCost);
+      document.getElementById('res-save').textContent = fmt(savings);
+      document.getElementById('res-breakeven').textContent = breakeven === Infinity ? 'N/A' : breakeven.toFixed(1);
+      document.getElementById('result-box').style.display = 'block';
+    });
+
+    document.getElementById('calc-btn').click();
+  </script>
+</BaseLayout>

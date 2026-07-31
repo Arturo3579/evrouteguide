@@ -1,0 +1,35 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const title = "About";
+const description = "EV Route Guide is an independent resource for electric vehicle owners in the United States. No manufacturer sponsorships, just honest data and real ownership experience.";
+---
+
+<BaseLayout title={title} description={description}>
+  <div class="page-content">
+    <header class="page-header">
+      <h1 class="page-title">About EV Route Guide</h1>
+      <p class="page-lead">Independent, evergreen guides for EV owners in the United States. No manufacturer money, no sponsored reviews, no hype.</p>
+    </header>
+
+    <div class="page-body">
+      <h2>What we do</h2>
+      <p>EV Route Guide exists because most EV content online is either manufacturer marketing or news sites chasing clicks with sensational headlines. We write practical, evergreen guides that answer the questions real owners keep asking for years:</p>
+      <ul>
+        <li>How much does it actually cost to charge at home?</li>
+        <li>Which wallbox should I buy for my garage?</li>
+        <li>Does fast charging really kill my battery?</li>
+        <li>Will an EV save me money over 5 years?</li>
+      </ul>
+
+      <h2>How we make money</h2>
+      <p>This site is supported by advertising (Google AdSense) and some affiliate links to home chargers and accessories. If you click an affiliate link and buy something, we earn a small commission at no extra cost to you. This does not influence our recommendations.</p>
+
+      <h2>Editorial independence</h2>
+      <p>We do not accept sponsored posts, paid reviews, or free vehicles from manufacturers. Every product recommendation is based on either hands-on testing or deep research into verified owner reviews and public data.</p>
+
+      <h2>Contact</h2>
+      <p>For corrections, suggestions, or partnership inquiries: <a href="mailto:thor19daniel@gmail.com">thor19daniel@gmail.com</a></p>
+    </div>
+  </div>
+</BaseLayout>
