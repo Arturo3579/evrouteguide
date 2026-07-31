@@ -1,49 +1,383 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 
-const title = "Guides";
+const title = "EV Guides";
 const description = "Practical guides for electric vehicle owners in the United States. Buying advice, charging basics, cost comparisons, and home installation.";
+
+const categories = [
+  {
+    name: "Buying & Comparing",
+    slug: "buying",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg>`,
+    color: "#2563eb",
+    bg: "#eff6ff",
+    guides: [
+      {
+        title: "Best Electric Cars Under $35,000 in 2026",
+        slug: "best-electric-cars-under-35000",
+        desc: "Top affordable EVs with real-world range, tax credit eligibility, and honest comparisons.",
+        image: "/images/guides/best-evs-under-35k.png",
+        hasImage: true
+      },
+      {
+        title: "Electric Car vs Hybrid: Which Should You Buy?",
+        slug: "electric-car-vs-hybrid",
+        desc: "Side-by-side breakdown of cost, range, charging, and 10-year break-even analysis.",
+        image: "/images/guides/ev-vs-hybrid.png",
+        hasImage: true
+      },
+      {
+        title: "Best Electric SUVs for Families",
+        slug: "best-electric-suvs-families",
+        desc: "Space, safety ratings, and road-trip readiness for the top family EV SUVs in the US.",
+        image: null,
+        hasImage: false,
+        placeholderIcon: `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg>`
+      },
+      {
+        title: "Longest Range Electric Cars You Can Buy Today",
+        slug: "longest-range-electric-cars",
+        desc: "The 8 EVs with the highest EPA range, and how real-world driving affects those numbers.",
+        image: null,
+        hasImage: false,
+        placeholderIcon: `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>`
+      }
+    ]
+  },
+  {
+    name: "Charging & Battery",
+    slug: "charging",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>`,
+    color: "#f97316",
+    bg: "#fff7ed",
+    guides: [
+      {
+        title: "How Long Do EV Batteries Actually Last?",
+        slug: "how-long-do-ev-batteries-last",
+        desc: "Real-world degradation data, warranty coverage, and what replacement costs if you're out of luck.",
+        image: null,
+        hasImage: false,
+        placeholderIcon: `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="16" x="4" y="4" rx="2"/><path d="M4 10h16"/><path d="M10 4v16"/></svg>`
+      },
+      {
+        title: "How Much Does It Cost to Charge an EV at Home?",
+        slug: "cost-to-charge-ev-at-home",
+        desc: "kWh math, time-of-use rates, and real monthly cost examples for popular EV models.",
+        image: null,
+        hasImage: false,
+        placeholderIcon: `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>`
+      },
+      {
+        title: "Level 1 vs Level 2 vs DC Fast Charging Explained",
+        slug: "level-1-vs-level-2-vs-dc-fast",
+        desc: "Speed, cost, and when to use each type. Includes network recommendations for road trips.",
+        image: null,
+        hasImage: false,
+        placeholderIcon: `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>`
+      },
+      {
+        title: "Does Fast Charging Damage EV Batteries?",
+        slug: "does-fast-charging-damage-batteries",
+        desc: "What the data actually says about DC fast charging, battery management systems, and best practices.",
+        image: null,
+        hasImage: false,
+        placeholderIcon: `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>`
+      }
+    ]
+  },
+  {
+    name: "Costs & Ownership",
+    slug: "costs",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/><line x1="16" x2="16" y1="14" y2="18"/><path d="M16 10h.01"/><path d="M12 10h.01"/><path d="M8 10h.01"/><path d="M12 14h.01"/><path d="M8 14h.01"/><path d="M12 18h.01"/><path d="M8 18h.01"/></svg>`,
+    color: "#22c55e",
+    bg: "#f0fdf4",
+    guides: [
+      {
+        title: "EV Maintenance Costs vs Gas Cars",
+        slug: "ev-maintenance-vs-gas",
+        desc: "What EVs don't need (oil, sparks) vs what they do (tires, brakes). 5-year and 10-year projections.",
+        image: null,
+        hasImage: false,
+        placeholderIcon: `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>`
+      },
+      {
+        title: "Hidden Costs of Owning an Electric Car",
+        slug: "hidden-costs-of-evs",
+        desc: "Electrical upgrades, public charging fees, tire wear, state registration fees, and accessories.",
+        image: null,
+        hasImage: false,
+        placeholderIcon: `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M21 12v5H5a2 2 0 0 0 0 4h14v-4"/><path d="M17 12H7"/></svg>`
+      },
+      {
+        title: "Is EV Insurance More Expensive?",
+        slug: "ev-insurance-more-expensive",
+        desc: "Why premiums are higher for some EVs, model-by-model comparison, and tips to lower your rate.",
+        image: null,
+        hasImage: false,
+        placeholderIcon: `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>`
+      },
+      {
+        title: "How Fast Do Electric Cars Lose Value?",
+        slug: "ev-depreciation",
+        desc: "Depreciation curves by brand, tax credit impact on resale, and which EVs hold value best.",
+        image: null,
+        hasImage: false,
+        placeholderIcon: `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>`
+      }
+    ]
+  },
+  {
+    name: "Home Charging Installation",
+    slug: "home",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>`,
+    color: "#7c3aed",
+    bg: "#f5f3ff",
+    guides: [
+      {
+        title: "Best Home EV Chargers: Reviewed",
+        slug: "best-home-ev-chargers",
+        desc: "Top 5 wallbox chargers compared on price, amps, smart features, cable length, and warranty.",
+        image: null,
+        hasImage: false,
+        placeholderIcon: `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/><line x1="16" x2="16" y1="14" y2="18"/><path d="M16 10h.01"/></svg>`
+      },
+      {
+        title: "How Much Does It Cost to Install a Home EV Charger?",
+        slug: "install-ev-charger-cost",
+        desc: "Full cost breakdown: charger unit, electrician labor, permits, and when you need a panel upgrade.",
+        image: null,
+        hasImage: false,
+        placeholderIcon: `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M2 12h20"/></svg>`
+      },
+      {
+        title: "Hardwired vs Plug-In EV Chargers: Which Is Better?",
+        slug: "hardwired-vs-plug-in-charger",
+        desc: "Safety, mobility, installation cost, and the right choice for rentals vs owned homes.",
+        image: null,
+        hasImage: false,
+        placeholderIcon: `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="m10 14 6-6"/></svg>`
+      },
+      {
+        title: "Can You Install an EV Charger If You Rent?",
+        slug: "install-charger-apartment",
+        desc: "Your rights by state, Level 1 vs shared Level 2, and how to negotiate with your landlord.",
+        image: null,
+        hasImage: false,
+        placeholderIcon: `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>`
+      }
+    ]
+  }
+];
 ---
 
 <BaseLayout title={title} description={description}>
   <div class="page-content">
-    <header class="page-header">
+    <header class="page-header guides-hero">
       <h1 class="page-title">EV Guides</h1>
       <p class="page-lead">Honest, evergreen guides written for real EV owners in the United States. No sponsored content, no manufacturer talking points.</p>
     </header>
 
-    <div class="page-body">
-      <h2>Buying &amp; Comparing</h2>
-      <ul>
-        <li><a href="/guides/best-electric-cars-under-35000">Best Electric Cars Under $35,000 in 2026</a></li>
-        <li><a href="/guides/electric-car-vs-hybrid">Electric Car vs Hybrid: Which Should You Buy?</a></li>
-        <li><a href="/guides/best-electric-suvs-families">Best Electric SUVs for Families</a></li>
-        <li><a href="/guides/longest-range-electric-cars">Longest Range Electric Cars You Can Buy Today</a></li>
-      </ul>
+    {categories.map((cat) => (
+      <section class="guide-category reveal">
+        <div class="category-header">
+          <div class="category-icon" style={`background: ${cat.bg}; color: ${cat.color}`}>
+            <Fragment set:html={cat.icon} />
+          </div>
+          <h2 class="category-title">{cat.name}</h2>
+        </div>
 
-      <h2>Charging &amp; Battery</h2>
-      <ul>
-        <li><a href="/guides/how-long-do-ev-batteries-last">How Long Do EV Batteries Actually Last?</a></li>
-        <li><a href="/guides/cost-to-charge-ev-at-home">How Much Does It Cost to Charge an EV at Home?</a></li>
-        <li><a href="/guides/level-1-vs-level-2-vs-dc-fast">Level 1 vs Level 2 vs DC Fast Charging Explained</a></li>
-        <li><a href="/guides/does-fast-charging-damage-batteries">Does Fast Charging Damage EV Batteries?</a></li>
-      </ul>
-
-      <h2>Costs &amp; Ownership</h2>
-      <ul>
-        <li><a href="/guides/ev-maintenance-vs-gas">EV Maintenance Costs vs Gas Cars</a></li>
-        <li><a href="/guides/hidden-costs-of-evs">Hidden Costs of Owning an Electric Car</a></li>
-        <li><a href="/guides/ev-insurance-more-expensive">Is EV Insurance More Expensive?</a></li>
-        <li><a href="/guides/ev-depreciation">How Fast Do Electric Cars Lose Value?</a></li>
-      </ul>
-
-      <h2>Home Charging Installation</h2>
-      <ul>
-        <li><a href="/guides/best-home-ev-chargers">Best Home EV Chargers: Reviewed</a></li>
-        <li><a href="/guides/install-ev-charger-cost">How Much Does It Cost to Install a Home EV Charger?</a></li>
-        <li><a href="/guides/hardwired-vs-plug-in-charger">Hardwired vs Plug-In EV Chargers: Which Is Better?</a></li>
-        <li><a href="/guides/install-charger-apartment">Can You Install an EV Charger If You Rent?</a></li>
-      </ul>
-    </div>
+        <div class="guide-grid">
+          {cat.guides.map((guide) => (
+            <a href={`/guides/${guide.slug}`} class="guide-card">
+              <div class="guide-card-image">
+                {guide.hasImage ? (
+                  <img src={guide.image} alt={guide.title} loading="lazy" />
+                ) : (
+                  <div class="guide-placeholder" style={`background: ${cat.bg}`}>
+                    <div class="placeholder-icon" style={`color: ${cat.color}`}>
+                      <Fragment set:html={guide.placeholderIcon} />
+                    </div>
+                  </div>
+                )}
+              </div>
+              <div class="guide-card-body">
+                <h3 class="guide-card-title">{guide.title}</h3>
+                <p class="guide-card-desc">{guide.desc}</p>
+                <span class="guide-card-cta" style={`color: ${cat.color}`}>
+                  Read guide <span class="cta-arrow">→</span>
+                </span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+    ))}
   </div>
+
+  <style>
+    .guides-hero {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 3rem;
+      border-bottom: 1px solid var(--color-border);
+      padding-bottom: 2rem;
+    }
+
+    .guide-category {
+      margin-bottom: 3.5rem;
+    }
+
+    .category-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .category-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .category-icon svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .category-title {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--color-text);
+      margin: 0;
+    }
+
+    .guide-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .guide-card {
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      background: var(--color-card);
+      overflow: hidden;
+      transition: all 0.25s ease;
+      text-decoration: none;
+    }
+
+    .guide-card:hover {
+      box-shadow: 0 8px 30px var(--color-shadow-lg);
+      border-color: transparent;
+      transform: translateY(-2px);
+    }
+
+    .guide-card:hover .guide-card-title {
+      color: var(--color-primary);
+    }
+
+    .guide-card:hover .cta-arrow {
+      transform: translateX(4px);
+    }
+
+    .guide-card-image {
+      width: 140px;
+      min-width: 140px;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+
+    .guide-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .guide-placeholder {
+      width: 100%;
+      height: 100%;
+      min-height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .placeholder-icon svg {
+      width: 36px;
+      height: 36px;
+      opacity: 0.6;
+    }
+
+    .guide-card-body {
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .guide-card-title {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.35;
+      margin-bottom: 0.4rem;
+      color: var(--color-text);
+      letter-spacing: -0.01em;
+      transition: color 0.2s;
+    }
+
+    .guide-card-desc {
+      font-size: 0.875rem;
+      color: var(--color-text-muted);
+      line-height: 1.6;
+      margin-bottom: 0.75rem;
+    }
+
+    .guide-card-cta {
+      font-size: 0.8rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      margin-top: auto;
+    }
+
+    .cta-arrow {
+      transition: transform 0.2s;
+      display: inline-block;
+    }
+
+    @media (min-width: 640px) {
+      .guide-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .guide-card-image {
+        width: 160px;
+        min-width: 160px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .guide-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.25rem;
+      }
+
+      .guide-card-image {
+        width: 180px;
+        min-width: 180px;
+      }
+    }
+  </style>
 </BaseLayout>
