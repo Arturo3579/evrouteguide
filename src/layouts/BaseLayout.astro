@@ -81,39 +81,17 @@ const breadcrumbSchema = breadcrumbs && breadcrumbs.length > 0 ? {
           <a href="/calculator">Calculator</a>
           <a href="/about">About</a>
         </nav>
-        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
-          <span class="theme-icon light">☀️</span>
-          <span class="theme-icon dark">🌙</span>
-        </button>
+
       </div>
     </header>
 
     <script>
-      const getTheme = () => {
-        if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-          return localStorage.getItem('theme');
-        }
-        return 'light';
-      };
-      const setTheme = (theme) => {
-        document.documentElement.setAttribute('data-theme', theme);
-        localStorage.setItem('theme', theme);
-      };
-      setTheme(getTheme());
-
       document.addEventListener('DOMContentLoaded', () => {
         const header = document.querySelector('.site-header');
-        const toggleBtn = document.getElementById('theme-toggle');
         if (header) {
           window.addEventListener('scroll', () => {
             if (window.scrollY > 20) header.classList.add('scrolled');
             else header.classList.remove('scrolled');
-          });
-        }
-        if (toggleBtn) {
-          toggleBtn.addEventListener('click', () => {
-            const current = getTheme();
-            setTheme(current === 'light' ? 'dark' : 'light');
           });
         }
         const revealElements = document.querySelectorAll('.reveal');
