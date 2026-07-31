@@ -1,21 +1,21 @@
 :root {
   /* === MONOCHROME PROFESSIONAL: Clean, no colors === */
 
-  /* Primary: medium gray, very light feel */
-  --color-primary: #475569;
-  --color-primary-light: #64748b;
-  --color-primary-hover: #334155;
-  --color-primary-dark: #334155;
-  --color-primary-bg: #f1f5f9;
+  /* Primary: emerald green (EV energy) */
+  --color-primary: #059669;
+  --color-primary-light: #10b981;
+  --color-primary-hover: #047857;
+  --color-primary-dark: #065f46;
+  --color-primary-bg: #ecfdf5;
 
-  /* Accent: light gray */
-  --color-accent: #94a3b8;
-  --color-accent-light: #cbd5e1;
-  --color-accent-bg: #f8fafc;
+  /* Accent: warm amber (charging/sun) */
+  --color-accent: #d97706;
+  --color-accent-light: #f59e0b;
+  --color-accent-bg: #fffbeb;
 
-  /* Highlight: teal soft */
-  --color-highlight: #0d9488;
-  --color-highlight-bg: #f0fdfa;
+  /* Highlight: deep green */
+  --color-highlight: #059669;
+  --color-highlight-bg: #ecfdf5;
 
   /* Fondos: very light and airy */
   --color-bg: #f8fafc;
@@ -35,10 +35,10 @@
   --color-shadow: rgba(15, 23, 42, 0.04);
   --color-shadow-lg: rgba(15, 23, 42, 0.06);
 
-  /* Footer: same as bg for seamless feel */
-  --color-footer-bg: #f8fafc;
-  --color-footer-text: #334155;
-  --color-footer-muted: #94a3b8;
+  /* Footer: soft green tint */
+  --color-footer-bg: #ecfdf5;
+  --color-footer-text: #065f46;
+  --color-footer-muted: #059669;
 
   /* Tipografía: Inter everywhere, clean and neutral */
   --font-display: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
@@ -470,16 +470,16 @@ a:hover {
 }
 
 .btn-primary {
-  background: transparent;
-  color: var(--color-primary);
-  border: 1.5px solid var(--color-border);
+  background: var(--color-primary);
+  color: #ffffff;
+  border: 1.5px solid var(--color-primary);
   font-weight: 500;
 }
 
 .btn-primary:hover {
-  background: var(--color-primary);
+  background: var(--color-primary-hover);
   color: #ffffff;
-  border-color: var(--color-primary);
+  border-color: var(--color-primary-hover);
   transform: translateY(-1px);
   text-decoration: none;
 }
@@ -491,9 +491,9 @@ a:hover {
 }
 
 .btn-secondary:hover {
-  background: var(--color-bg-warm);
-  border-color: var(--color-text-muted);
-  color: var(--color-text);
+  background: var(--color-primary-bg);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
   transform: translateY(-1px);
   text-decoration: none;
 }
