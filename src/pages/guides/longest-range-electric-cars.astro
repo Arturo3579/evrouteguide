@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import PostMeta from "../../components/PostMeta.astro";
 const title = "Longest Range Electric Cars: Top 8 EVs for 2026";
 const description = "Compare the longest-range electric cars available in the US. See EPA range, real-world expectations, pricing, battery size, and charging speed for the top 8 EVs that go the distance.";
 const breadcrumbs = [
@@ -33,11 +34,7 @@ const articleSchema = {
     <article class="post-article">
       <header class="post-header">
         <h1 class="post-title">{title}</h1>
-        <div class="post-meta">
-          <span>Updated July 2026</span>
-          <span>•</span>
-          <span>EV Route Guide</span>
-        </div>
+        <PostMeta date="July 2026" cycle="6 months" />
       </header>
 
       <div class="post-content">

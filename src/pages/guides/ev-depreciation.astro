@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import PostMeta from "../../components/PostMeta.astro";
 const title = "EV Depreciation: What Every Buyer Should Know";
 const description = "EVs depreciate faster than average in early years, but the curve is flattening. See 3- and 5-year resale values by model, understand how tax credits and battery health affect depreciation, and learn which EVs hold value best.";
 const breadcrumbs = [
@@ -43,11 +44,7 @@ const breadcrumbSchema = {
     <article class="post-article">
       <header class="post-header">
         <h1 class="post-title">{title}</h1>
-        <div class="post-meta">
-          <span>Updated July 2026</span>
-          <span>•</span>
-          <span>EV Route Guide</span>
-        </div>
+        <PostMeta date="July 2026" cycle="6 months" />
       </header>
 
       <div class="post-content">

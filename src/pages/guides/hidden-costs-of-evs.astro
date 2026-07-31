@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import PostMeta from "../../components/PostMeta.astro";
 const title = "Hidden Costs of EVs";
 const description = "EVs save money on fuel, but ownership brings less obvious expenses. Learn about home electrical upgrades, public charging premiums, tire wear, registration fees, adapters, and how first-year EV costs compare to gas cars.";
 const breadcrumbs = [
@@ -43,11 +44,7 @@ const breadcrumbSchema = {
     <article class="post-article">
       <header class="post-header">
         <h1 class="post-title">{title}</h1>
-        <div class="post-meta">
-          <span>Updated July 2026</span>
-          <span>•</span>
-          <span>EV Route Guide</span>
-        </div>
+        <PostMeta date="July 2026" cycle="12 months" />
       </header>
 
       <div class="post-content">

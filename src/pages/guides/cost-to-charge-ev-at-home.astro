@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import PostMeta from "../../components/PostMeta.astro";
 const title = "Cost to Charge an EV at Home (Complete Guide)";
 const description = "Learn exactly how much it costs to charge an electric car at home with real examples, time-of-use rate math, and monthly cost estimates for popular EVs.";
 const breadcrumbs = [
@@ -44,11 +45,7 @@ const breadcrumbSchema = {
     <article class="post-article">
       <header class="post-header">
         <h1 class="post-title">{title}</h1>
-        <div class="post-meta">
-          <span>Updated July 2026</span>
-          <span>•</span>
-          <span>EV Route Guide</span>
-        </div>
+        <PostMeta date="July 2026" cycle="6 months" />
       </header>
 
       <div class="post-content">

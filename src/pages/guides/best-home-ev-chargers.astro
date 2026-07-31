@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import PostMeta from "../../components/PostMeta.astro";
 const title = "Best Home EV Chargers: Wallbox Reviews and Buying Guide";
 const description = "Compare the top 5 home EV chargers including ChargePoint Home Flex, JuiceBox, Grizzl-E, Tesla Wall Connector, and Emporia. See prices, amps, cable lengths, and smart features side by side.";
 const breadcrumbs = [
@@ -33,11 +34,7 @@ const articleSchema = {
     <article class="post-article">
       <header class="post-header">
         <h1 class="post-title">{title}</h1>
-        <div class="post-meta">
-          <span>Updated July 2026</span>
-          <span>•</span>
-          <span>EV Route Guide</span>
-        </div>
+        <PostMeta date="July 2026" cycle="6 months" />
       </header>
 
       <div class="post-content">

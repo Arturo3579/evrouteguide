@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import PostMeta from "../../components/PostMeta.astro";
 const title = "How Long Do EV Batteries Last?";
 const description = "EV batteries typically last 8-15 years with modest degradation. Learn what real-world data shows, how warranties protect you, what factors accelerate wear, and how much replacement costs if you're out of coverage.";
 const breadcrumbs = [
@@ -43,11 +44,7 @@ const breadcrumbSchema = {
     <article class="post-article">
       <header class="post-header">
         <h1 class="post-title">{title}</h1>
-        <div class="post-meta">
-          <span>Updated July 2026</span>
-          <span>•</span>
-          <span>EV Route Guide</span>
-        </div>
+        <PostMeta date="July 2026" cycle="18-24 months" />
       </header>
 
       <div class="post-content">
