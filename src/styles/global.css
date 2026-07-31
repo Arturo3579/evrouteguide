@@ -158,10 +158,9 @@ a:hover {
 }
 
 .site-header .container {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
   gap: 1rem;
 }
 
@@ -198,6 +197,7 @@ a:hover {
   display: flex;
   gap: 1.75rem;
   align-items: center;
+  justify-self: center;
 }
 
 .site-nav a {
@@ -242,7 +242,6 @@ a:hover {
   align-items: center;
   justify-content: center;
   transition: all 0.2s ease;
-  margin-left: 0.5rem;
   color: var(--color-text-muted);
 }
 
