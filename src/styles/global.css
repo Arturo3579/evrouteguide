@@ -1,44 +1,44 @@
 :root {
   /* === MONOCHROME PROFESSIONAL: Clean, no colors === */
 
-  /* Primary: steel gray, softer than black */
-  --color-primary: #374151;
-  --color-primary-light: #4b5563;
-  --color-primary-hover: #4b5563;
-  --color-primary-dark: #1f2937;
-  --color-primary-bg: #f3f4f6;
+  /* Primary: medium gray, very light feel */
+  --color-primary: #475569;
+  --color-primary-light: #64748b;
+  --color-primary-hover: #334155;
+  --color-primary-dark: #334155;
+  --color-primary-bg: #f1f5f9;
 
-  /* Accent: medium gray */
-  --color-accent: #6b7280;
-  --color-accent-light: #9ca3af;
-  --color-accent-bg: #f3f4f6;
+  /* Accent: light gray */
+  --color-accent: #94a3b8;
+  --color-accent-light: #cbd5e1;
+  --color-accent-bg: #f8fafc;
 
-  /* Highlight: subtle blue-gray */
-  --color-highlight: #3b82f6;
-  --color-highlight-bg: #eff6ff;
+  /* Highlight: teal soft */
+  --color-highlight: #0d9488;
+  --color-highlight-bg: #f0fdfa;
 
-  /* Fondos: pure white and soft grays */
-  --color-bg: #ffffff;
-  --color-bg-alt: #fafafa;
-  --color-bg-warm: #f3f4f6;
+  /* Fondos: very light and airy */
+  --color-bg: #f8fafc;
+  --color-bg-alt: #ffffff;
+  --color-bg-warm: #f1f5f9;
   --color-card: #ffffff;
 
-  /* Texto: softer than pure black */
-  --color-text: #1f2937;
-  --color-text-secondary: #4b5563;
-  --color-text-muted: #6b7280;
-  --color-text-light: #9ca3af;
+  /* Texto: medium grays, never black */
+  --color-text: #334155;
+  --color-text-secondary: #64748b;
+  --color-text-muted: #94a3b8;
+  --color-text-light: #cbd5e1;
 
   /* Bordes y sombras: extremely subtle */
-  --color-border: #e5e7eb;
-  --color-border-light: #f3f4f6;
-  --color-shadow: rgba(0, 0, 0, 0.04);
-  --color-shadow-lg: rgba(0, 0, 0, 0.08);
+  --color-border: #e2e8f0;
+  --color-border-light: #f8fafc;
+  --color-shadow: rgba(15, 23, 42, 0.04);
+  --color-shadow-lg: rgba(15, 23, 42, 0.06);
 
-  /* Footer: white with subtle top border */
-  --color-footer-bg: #ffffff;
-  --color-footer-text: #1f2937;
-  --color-footer-muted: #6b7280;
+  /* Footer: same as bg for seamless feel */
+  --color-footer-bg: #f8fafc;
+  --color-footer-text: #334155;
+  --color-footer-muted: #94a3b8;
 
   /* Tipografía: Inter everywhere, clean and neutral */
   --font-display: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
@@ -148,16 +148,17 @@ a:hover {
 
 /* ===== HEADER ===== */
 .site-header {
-  background: var(--color-bg);
+  background: rgba(248, 250, 252, 0.92);
+  backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--color-border);
-  padding: 0.875rem 0;
+  padding: 1rem 0;
   position: sticky;
   top: 0;
   z-index: 50;
 }
 
 .site-header.scrolled {
-  box-shadow: 0 2px 12px var(--color-shadow);
+  box-shadow: 0 1px 8px var(--color-shadow);
 }
 
 .site-header .container {
@@ -423,9 +424,8 @@ a:hover {
 
 /* ===== HERO ===== */
 .hero {
-  padding: 4rem 0 3rem;
+  padding: 4.5rem 0 3rem;
   text-align: center;
-  border-bottom: 1px solid var(--color-border);
 }
 
 .hero-title {
@@ -471,26 +471,29 @@ a:hover {
 }
 
 .btn-primary {
-  background: var(--color-primary);
-  color: #ffffff;
+  background: transparent;
+  color: var(--color-primary);
+  border: 1.5px solid var(--color-border);
   font-weight: 500;
 }
 
 .btn-primary:hover {
-  background: var(--color-primary-light);
+  background: var(--color-primary);
+  color: #ffffff;
+  border-color: var(--color-primary);
   transform: translateY(-1px);
   text-decoration: none;
-  color: #ffffff;
 }
 
 .btn-secondary {
-  background: var(--color-card);
+  background: transparent;
   color: var(--color-text-secondary);
   border: 1px solid var(--color-border);
 }
 
 .btn-secondary:hover {
-  border-color: var(--color-text-light);
+  background: var(--color-bg-warm);
+  border-color: var(--color-text-muted);
   color: var(--color-text);
   transform: translateY(-1px);
   text-decoration: none;
