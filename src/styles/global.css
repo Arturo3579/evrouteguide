@@ -745,6 +745,27 @@ a:hover {
   font-style: italic;
 }
 
+.chart-image {
+  margin: 0.75rem 0 1.5rem;
+  text-align: center;
+}
+
+.chart-image img {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 3px 16px var(--color-shadow);
+  border: 1px solid var(--color-border);
+}
+
+.chart-image figcaption {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
 .car-image-pair {
   display: grid;
   grid-template-columns: 1fr 1fr;
