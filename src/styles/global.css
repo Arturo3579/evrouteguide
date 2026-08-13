@@ -897,49 +897,159 @@ a:hover {
 .info-box,
 .warning-box,
 .tip-box,
-.success-box {
+.success-box,
+.stat-box {
   padding: 1.25rem;
   border-radius: var(--radius-lg);
   margin: 1.5rem 0;
   font-size: 0.975rem;
   line-height: 1.65;
-  border-left: 3px solid;
+  border-left: 4px solid;
   position: relative;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
 }
 
+.info-box::before,
+.warning-box::before,
+.tip-box::before {
+  display: inline-block;
+  margin-right: 0.5rem;
+  font-size: 1.1rem;
+  vertical-align: -2px;
+}
+
+.info-box::before { content: "ℹ️"; }
+.warning-box::before { content: "⚠️"; }
+.tip-box::before { content: "💡"; }
+
 .info-box {
-  background-color: var(--color-bg-alt);
-  border-left-color: var(--color-primary);
-  color: var(--color-text-secondary);
+  background-color: #f1f5f9;
+  border-left-color: #3b82f6;
+  color: #334155;
 }
 
 .warning-box {
-  background-color: #fef2f2;
-  border-left-color: #ef4444;
-  color: #991b1b;
+  background-color: #fff7ed;
+  border-left-color: #f97316;
+  color: #7c2d12;
 }
 
 .tip-box {
-  background-color: var(--color-primary-bg);
-  border-left-color: var(--color-primary);
-  color: #064e3b;
+  background-color: #f0fdf4;
+  border-left-color: #22c55e;
+  color: #14532d;
 }
 
 .success-box {
-  background-color: var(--color-primary-bg);
-  border-left-color: var(--color-primary);
-  color: #064e3b;
+  background-color: #f0fdf4;
+  border-left-color: #22c55e;
+  color: #14532d;
 }
 
 .info-box strong,
 .warning-box strong,
 .tip-box strong,
-.success-box strong {
+.success-box strong,
+.stat-box strong {
   display: block;
   margin-bottom: 0.4rem;
   font-weight: 700;
   font-size: 1rem;
   color: var(--color-text);
+}
+
+/* Stat box: horizontal row of big numbers */
+.stat-box {
+  background-color: #fafafa;
+  border-left-color: var(--color-primary);
+  padding: 1rem 1.25rem;
+}
+
+.stat-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.stat-item {
+  text-align: center;
+  min-width: 80px;
+}
+
+.stat-number {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1.2;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-top: 0.15rem;
+}
+
+@media (max-width: 640px) {
+  .stat-row {
+    gap: 1rem;
+    justify-content: space-between;
+  }
+  .stat-number {
+    font-size: 1.25rem;
+  }
+}
+
+/* ===== ICON LISTS ===== */
+.pros-list,
+.cons-list,
+.money-list,
+.battery-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.75rem 0;
+}
+
+.pros-list li,
+.cons-list li,
+.money-list li,
+.battery-list li {
+  padding-left: 1.75rem;
+  position: relative;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.pros-list li::before {
+  content: "✅";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.cons-list li::before {
+  content: "⚠️";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.money-list li::before {
+  content: "💰";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.battery-list li::before {
+  content: "🔋";
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 /* ===== HIGHLIGHT ===== */
