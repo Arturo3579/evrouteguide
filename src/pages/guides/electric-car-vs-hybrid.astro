@@ -16,7 +16,7 @@ const articleSchema = {
   "author": { "@type": "Organization", "name": "EV Route Guide" },
   "publisher": { "@type": "Organization", "name": "EV Route Guide", "logo": { "@type": "ImageObject", "url": "https://www.evrouteguide.com/images/logo.svg" } },
   "datePublished": "2026-07-31",
-  "dateModified": "2026-07-31"
+  "dateModified": "2026-08-17"
 };
 const breadcrumbSchema = {
   "@context": "https://schema.org",
@@ -58,66 +58,21 @@ const breadcrumbSchema = {
         <p>A <strong>hybrid</strong> combines a gasoline engine with a small electric motor and battery. Conventional hybrids like the Toyota Prius cannot be plugged in; they generate electricity through regenerative braking and engine load. A <strong>plug-in hybrid (PHEV)</strong>, like the Toyota Prius Prime or Hyundai Tucson PHEV, offers 25 to 50 miles of electric-only range before the gasoline engine takes over.</p>
 
         <h2>Side-by-Side Comparison</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Factor</th>
-              <th>Electric Car (BEV)</th>
-              <th>Hybrid (HEV)</th>
-              <th>Plug-in Hybrid (PHEV)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Average Purchase Price</td>
-              <td>$32,000 – $50,000</td>
-              <td>$28,000 – $35,000</td>
-              <td>$30,000 – $40,000</td>
-            </tr>
-            <tr>
-              <td>Fuel Source</td>
-              <td>Electricity only</td>
-              <td>Gasoline only</td>
-              <td>Electricity + Gasoline</td>
-            </tr>
-            <tr>
-              <td>Typical Range</td>
-              <td>250 – 350 mi</td>
-              <td>500 – 700 mi (tank)</td>
-              <td>30 – 50 mi EV, then 500+ mi hybrid</td>
-            </tr>
-            <tr>
-              <td>Refuel Time</td>
-              <td>20 min – 10 hours</td>
-              <td>5 minutes</td>
-              <td>5 min (gas) / 2–8 hours (electric)</td>
-            </tr>
-            <tr>
-              <td>Maintenance Needs</td>
-              <td>Very low</td>
-              <td>Moderate</td>
-              <td>Moderate</td>
-            </tr>
-            <tr>
-              <td>Annual Fuel Cost</td>
-              <td>$400 – $700</td>
-              <td>$900 – $1,400</td>
-              <td>$600 – $1,000</td>
-            </tr>
-            <tr>
-              <td>Tailpipe Emissions</td>
-              <td>Zero</td>
-              <td>Low</td>
-              <td>Low to Zero (if plugged in daily)</td>
-            </tr>
-            <tr>
-              <td>Home Charging Needed?</td>
-              <td>Strongly recommended</td>
-              <td>No</td>
-              <td>Recommended for full savings</td>
-            </tr>
-          </tbody>
-        </table>
+        <figure class="chart-image">
+          <img src="/images/guides/ev-vs-hybrid-comparison-chart.webp" alt="Vertical comparison chart: Electric Car (BEV) vs Hybrid (HEV) vs Plug-in Hybrid (PHEV) on price, range, fuel cost, emissions, and maintenance" loading="lazy" width="700" height="1100" />
+          <figcaption>At-a-glance comparison of purchase price, range, running costs, and emissions across the three powertrain types.</figcaption>
+        </figure>
+
+        <h2>Cost and Break-Even Analysis</h2>
+        <div class="stat-box">
+          <div class="stat-row">
+            <div class="stat-item"><span class="stat-number">5¢</span><span class="stat-label">EV cost per mile</span></div>
+            <div class="stat-item"><span class="stat-number">7¢</span><span class="stat-label">Hybrid cost per mile</span></div>
+            <div class="stat-item"><span class="stat-number">$6k–$10k</span><span class="stat-label">10-year savings (EV vs hybrid)</span></div>
+            <div class="stat-item"><span class="stat-number">$7,500</span><span class="stat-label">Max federal tax credit (EV/PHEV)</span></div>
+          </div>
+        </div>
+        <p>Upfront, hybrids usually win. A Toyota Camry Hybrid starts thousands of dollars below a Tesla Model 3 or Hyundai Ioniq 5. However, the gap narrows quickly when you factor in incentives. Federal tax credits up to $7,500 apply to many new EVs and some PHEVs, while conventional hybrids receive none.</p>
 
         <h2>Cost and Break-Even Analysis</h2>
         <p>Upfront, hybrids usually win. A Toyota Camry Hybrid starts thousands of dollars below a Tesla Model 3 or Hyundai Ioniq 5. However, the gap narrows quickly when you factor in incentives. Federal tax credits up to $7,500 apply to many new EVs and some PHEVs, while conventional hybrids receive none.</p>
@@ -125,17 +80,31 @@ const breadcrumbSchema = {
         <p>Insurance and tire costs are comparable. The only area where EVs may cost more is tire replacement on high-torque, heavy models, and eventual battery replacement outside warranty. In practice, battery degradation is modest, and most original owners never replace a pack.</p>
 
         <h2>Daily Life: Charging vs Gas Stations</h2>
+        <div class="info-box">
+          <strong>Refueling Reality</strong>
+          <ul class="battery-list">
+            <li><strong>EV:</strong> Plug in at home overnight → wake up to a "full tank" every morning</li>
+            <li><strong>Hybrid:</strong> 5-minute gas stop → 600+ miles of range, no planning needed</li>
+            <li><strong>PHEV:</strong> Best of both worlds if you charge daily and gas for long trips</li>
+          </ul>
+        </div>
         <p>The largest lifestyle difference is refueling. EV owners charge at home overnight and wake up to a full tank every morning. That convenience is unmatched for commuters with dedicated parking. If you live in an apartment without assigned charging or rely entirely on street parking, an EV can be challenging unless your workplace offers plugs.</p>
         <p>Hybrids eliminate range anxiety entirely. You drive to a gas station for five minutes and continue for another 600 miles. For road warriors who cover 30,000 highway miles per year, a hybrid or PHEV may still be the more practical choice despite higher running costs.</p>
         <p>Public EV charging has improved dramatically, but rural corridors and certain mountain regions still have sparse fast-charging options. Before committing to a BEV, map your common long-distance routes using PlugShare or A Better Route Planner.</p>
 
         <h2>Environmental Impact</h2>
+        <div class="stat-box">
+          <div class="stat-row">
+            <div class="stat-item"><span class="stat-number">50%</span><span class="stat-label">Less lifetime emissions (EV vs 50-mpg hybrid)</span></div>
+            <div class="stat-item"><span class="stat-number">150k</span><span class="stat-label">Miles to break even on battery manufacturing</span></div>
+          </div>
+        </div>
         <p>All hybrids reduce emissions compared to conventional cars, but BEVs are cleaner over their lifetime in almost every region of the United States. Even accounting for battery manufacturing and coal-heavy grids, an EV produces roughly half the greenhouse gas emissions of a 50-mpg hybrid over 150,000 miles.</p>
         <p>As renewable energy expands on the grid, EVs automatically get cleaner without any hardware changes. Hybrids are locked to gasoline combustion physics. If minimizing your carbon footprint is a priority, the EV is the stronger long-term choice.</p>
 
         <div class="tip-box">
-          <h3>Quick Decision Guide</h3>
-          <ul>
+          <strong>Quick Decision Guide</strong>
+          <ul class="pros-list">
             <li><strong>Choose a BEV</strong> if you have home charging, drive under 250 miles on busy days, and want the lowest running costs.</li>
             <li><strong>Choose a PHEV</strong> if you have a short daily commute but take frequent road trips where charging infrastructure is uncertain.</li>
             <li><strong>Choose a conventional hybrid</strong> if you lack home charging access, live in a charging desert, or want the simplest ownership experience with zero behavior change.</li>
