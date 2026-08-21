@@ -16,7 +16,7 @@ const articleSchema = {
   "author": { "@type": "Organization", "name": "EV Route Guide" },
   "publisher": { "@type": "Organization", "name": "EV Route Guide", "logo": { "@type": "ImageObject", "url": "https://www.evrouteguide.com/images/logo.svg" } },
   "datePublished": "2026-07-31",
-  "dateModified": "2026-07-31"
+  "dateModified": "2026-08-21"
 };
 const breadcrumbSchema = {
   "@context": "https://schema.org",
@@ -55,8 +55,19 @@ const breadcrumbSchema = {
         </p>
 
         <h2>Home Electrical Upgrades</h2>
+        <figure class="chart-image">
+          <img src="/images/guides/home-electrical-upgrade.webp" alt="Electrician installing a 240V Level 2 EV charger in a residential garage" loading="lazy" width="800" height="450" />
+          <figcaption>Level 2 charger installation: the most common hidden cost for new EV owners.</figcaption>
+        </figure>
+        <div class="stat-box">
+          <div class="stat-row">
+            <div class="stat-item"><span class="stat-number">$500-$2k</span><span class="stat-label">Basic install (spare panel capacity)</span></div>
+            <div class="stat-item"><span class="stat-number">$2.5k-$5.5k</span><span class="stat-label">With panel upgrade</span></div>
+            <div class="stat-item"><span class="stat-number">30%</span><span class="stat-label">Federal tax credit (up to $1,000)</span></div>
+          </div>
+        </div>
         <p>
-          Charging at home on a standard 120V outlet (Level 1) is possible, but impractical for most drivers. Adding 3-5 miles of range per hour means a depleted battery can take two to three days to fully recharge. Most owners install a <strong>240V Level 2 charger</strong>, which typically delivers 25-40 miles of range per hour.
+           Charging at home on a standard 120V outlet (Level 1) is possible, but impractical for most drivers. Adding 3-5 miles of range per hour means a depleted battery can take two to three days to fully recharge. Most owners install a <strong>240V Level 2 charger</strong>, which typically delivers 25-40 miles of range per hour.
         </p>
         <p>
           The cost depends on your existing electrical panel. If you have spare amperage, a licensed electrician can install a dedicated 240V outlet or hardwired station for <strong>$500 to $2,000</strong>. If your panel is near capacity — common in older homes — you may need a panel upgrade or a load-management device, pushing costs to <strong>$2,500 to $5,500</strong>. In rare cases requiring a service line upgrade from the utility, the bill can climb higher.
@@ -66,16 +77,40 @@ const breadcrumbSchema = {
         </p>
 
         <h2>Public Charging Costs vs. Home Charging</h2>
+        <figure class="chart-image">
+          <img src="/images/guides/public-vs-home-charging-cost.webp" alt="Comparison: home charging at $0.16/kWh versus public DC fast charging at $0.40-$0.60/kWh" loading="lazy" width="800" height="800" />
+          <figcaption>Public fast charging can cost 2-3x more than charging at home.</figcaption>
+        </figure>
+        <div class="stat-box">
+          <div class="stat-row">
+            <div class="stat-item"><span class="stat-number">$0.16</span><span class="stat-label">Per kWh at home (avg)</span></div>
+            <div class="stat-item"><span class="stat-number">$0.40-$0.60</span><span class="stat-label">Per kWh public DC fast</span></div>
+            <div class="stat-item"><span class="stat-number">$12</span><span class="stat-label">Full charge at home (75 kWh)</span></div>
+            <div class="stat-item"><span class="stat-number">$30-$45</span><span class="stat-label">Full charge public fast</span></div>
+          </div>
+        </div>
         <p>
-          Home charging is cheap. At the U.S. average residential rate of roughly <strong>$0.16 per kWh</strong> in 2026, filling a 75 kWh battery costs about $12. Public DC fast charging is a different story. Networks like Electrify America, EVgo, and Tesla Supercharger often charge <strong>$0.40 to $0.60 per kWh</strong>, depending on location and membership status. Some locations add idle fees or peak-time surcharges.
+           Home charging is cheap. At the U.S. average residential rate of roughly <strong>$0.16 per kWh</strong> in 2026, filling a 75 kWh battery costs about $12. Public DC fast charging is a different story. Networks like Electrify America, EVgo, and Tesla Supercharger often charge <strong>$0.40 to $0.60 per kWh</strong>, depending on location and membership status. Some locations add idle fees or peak-time surcharges.
         </p>
         <p>
           Relying primarily on public fast charging can erase much of the EV fuel-cost advantage. A driver who charges exclusively at public stations may spend nearly as much per mile as a hybrid driver, though still less than most non-hybrid gasoline vehicles. The ideal strategy is home charging for daily needs, with public charging reserved for road trips.
         </p>
 
         <h2>Tire Replacement: The Surprisingly Big One</h2>
+        <figure class="chart-image">
+          <img src="/images/guides/ev-tire-wear.webp" alt="EV tire wear comparison: worn tire at 25k miles versus gas car tire at 50k miles" loading="lazy" width="800" height="450" />
+          <figcaption>EV tires wear 30-50% faster due to extra weight and instant torque.</figcaption>
+        </figure>
+        <div class="stat-box">
+          <div class="stat-row">
+            <div class="stat-item"><span class="stat-number">20k-35k</span><span class="stat-label">EV tire life (miles)</span></div>
+            <div class="stat-item"><span class="stat-number">40k-60k</span><span class="stat-label">Gas car tire life (miles)</span></div>
+            <div class="stat-item"><span class="stat-number">$800-$1,600</span><span class="stat-label">EV tire replacement set</span></div>
+            <div class="stat-item"><span class="stat-number">$500-$900</span><span class="stat-label">Gas car tire set</span></div>
+          </div>
+        </div>
         <p>
-          EVs wear through tires faster than comparable gas cars for two simple reasons: <strong>weight</strong> and <strong>instant torque</strong>. A Tesla Model Y Performance weighs roughly 4,400 pounds — about 500-800 pounds more than a similarly sized BMW X3. That extra mass presses harder on the contact patch. Meanwhile, the immediate torque from an electric motor shreds tread more aggressively during spirited acceleration.
+           EVs wear through tires faster than comparable gas cars for two simple reasons: <strong>weight</strong> and <strong>instant torque</strong>. A Tesla Model Y Performance weighs roughly 4,400 pounds — about 500-800 pounds more than a similarly sized BMW X3. That extra mass presses harder on the contact patch. Meanwhile, the immediate torque from an electric motor shreds tread more aggressively during spirited acceleration.
         </p>
         <p>
           Real-world owner forums consistently report EV tires needing replacement every <strong>20,000 to 35,000 miles</strong>, compared with 40,000 to 60,000 miles for many gas-car tires. Because many EVs also require dedicated EV-rated tires (optimized for low rolling resistance and high load ratings), replacement sets can cost <strong>$800 to $1,600</strong> rather than the $500-$900 typical for mid-size sedans.
@@ -92,67 +127,39 @@ const breadcrumbSchema = {
         </p>
 
         <h3>First-Year Hidden Costs: EV vs. Gas Car</h3>
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>Expense Category</th>
-                <th>Typical EV Cost</th>
-                <th>Typical Gas Car Cost</th>
-                <th>Notes</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Home charging installation</td>
-                <td>$750 – $2,500</td>
-                <td>$0</td>
-                <td>30% federal tax credit may apply</td>
-              </tr>
-              <tr>
-                <td>Public charging (annual)</td>
-                <td>$300 – $900</td>
-                <td>N/A</td>
-                <td>Highly variable; assumes some road trips</td>
-              </tr>
-              <tr>
-                <td>Tire replacement (annual)</td>
-                <td>$400 – $800</td>
-                <td>$250 – $450</td>
-                <td>EVs wear tires ~30-50% faster</td>
-              </tr>
-              <tr>
-                <td>Registration surcharge</td>
-                <td>$50 – $225</td>
-                <td>$0</td>
-                <td>Varies widely by state</td>
-              </tr>
-              <tr>
-                <td>Adapters / accessories</td>
-                <td>$100 – $400</td>
-                <td>$50 – $150</td>
-                <td>Charging adapters, mats, organizers</td>
-              </tr>
-              <tr>
-                <td>Maintenance (annual)</td>
-                <td>$200 – $350</td>
-                <td>$600 – $900</td>
-                <td>EVs still win overall on maintenance</td>
-              </tr>
-            </tbody>
-          </table>
+        <figure class="chart-image">
+          <img src="/images/guides/hidden-costs-comparison-chart.webp" alt="First-year cost comparison: EV versus gas car across 6 expense categories" loading="lazy" width="800" height="1200" />
+          <figcaption>Side-by-side comparison of first-year ownership costs.</figcaption>
+        </figure>
+        <div class="info-box">
+          <strong>Where EVs Still Win</strong>
+          <ul class="pros-list">
+            <li><strong>Maintenance:</strong> $200-$350/yr vs $600-$900/yr for gas cars</li>
+            <li><strong>Fuel:</strong> Even with public charging, EVs cost less per mile than non-hybrid gas cars</li>
+            <li><strong>Tax credits:</strong> 30% back on charger install (up to $1,000)</li>
+          </ul>
         </div>
 
         <div class="warning-box">
-          <strong>Watch Out:</strong> Many EV cost calculators assume you will charge exclusively at home at residential rates. If you live in an apartment or rely heavily on public DC fast charging, your real-world "fuel" costs may be 2-3x higher than advertised.
+          <strong>Watch Out: The Public Charging Trap</strong>
+          <p>Many EV cost calculators assume you will charge exclusively at home at residential rates. If you live in an apartment or rely heavily on public DC fast charging, your real-world "fuel" costs may be <strong>2-3x higher</strong> than advertised. Budget accordingly.</p>
         </div>
 
         <h2>How to Minimize Hidden EV Costs</h2>
+        <div class="tip-box">
+          <strong>4 Ways to Save</strong>
+          <ul class="pros-list">
+            <li><strong>Get 3+ electrical quotes</strong> – prices vary wildly between electricians</li>
+            <li><strong>Rotate tires every 5,000–6,000 miles</strong> – extends life by 20-30%</li>
+            <li><strong>Join charging network memberships</strong> – Electrify America Pass+ saves 20-30%</li>
+            <li><strong>Check state EV fee laws</strong> – some states offer rebates that offset registration costs</li>
+          </ul>
+        </div>
         <ul>
           <li><strong>Get multiple electrical quotes</strong> and ask about load-sharing devices to avoid a panel upgrade.</li>
-          <li><strong>Rotate tires every 5,000–6,000 miles</strong> and keep pressures at the manufacturer’s recommended maximum to slow wear.</li>
+          <li><strong>Rotate tires every 5,000–6,000 miles</strong> and keep pressures at the manufacturer's recommended maximum to slow wear.</li>
           <li><strong>Join charging network membership programs</strong> (Electrify America Pass+, Tesla Supercharging non-Tesla plans) for discounted per-kWh rates.</li>
-          <li><strong>Research your state’s EV fees</strong> before budgeting; some states are reconsidering flat fees in favor of per-mile road-use charges.</li>
+          <li><strong>Research your state's EV fees</strong> before budgeting; some states are reconsidering flat fees in favor of per-mile road-use charges.</li>
         </ul>
 
         <h2>Related Guides</h2>
