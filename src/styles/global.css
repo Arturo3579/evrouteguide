@@ -65,6 +65,11 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 body {
@@ -1062,11 +1067,13 @@ a:hover {
 }
 
 /* ===== TABLES ===== */
-.comparison-table-container {
+.comparison-table-container,
+.table-scroll-wrapper {
   overflow-x: auto;
   margin: 1.25rem 0;
   border-radius: var(--radius-lg);
   border: 1px solid var(--color-border);
+  -webkit-overflow-scrolling: touch;
 }
 
 .comparison-table,
@@ -1076,6 +1083,12 @@ a:hover {
   border-spacing: 0;
   font-size: 0.9rem;
   min-width: 640px;
+}
+
+.table-scroll-wrapper table {
+  margin: 0;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .comparison-table th,
@@ -1641,25 +1654,28 @@ a:hover {
 /* ===== MOBILE HEADER FIX ===== */
 @media (max-width: 640px) {
   .site-header .container {
-    gap: 0.5rem;
+    gap: 0.4rem;
+    grid-template-columns: auto 1fr;
   }
 
   .site-logo {
-    width: 28px;
-    height: 28px;
+    width: 26px;
+    height: 26px;
   }
 
   .site-title-text {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .site-nav {
-    gap: 0.75rem;
+    gap: 0.5rem;
+    justify-self: end;
   }
 
   .site-nav a {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     letter-spacing: -0.02em;
+    padding: 0.2rem 0;
   }
 
   .hero-title {
@@ -1672,5 +1688,40 @@ a:hover {
 
   .page-title {
     font-size: 1.75rem;
+  }
+
+  /* Tables scroll horizontally instead of breaking layout */
+  .comparison-table,
+  .post-content table {
+    font-size: 0.8rem;
+  }
+
+  .comparison-table th,
+  .comparison-table td,
+  .post-content th,
+  .post-content td {
+    padding: 0.5rem 0.625rem;
+  }
+
+  /* Stat-boxes: smaller numbers and tighter spacing */
+  .stat-box {
+    padding: 0.875rem;
+  }
+
+  .stat-row {
+    gap: 0.75rem;
+    justify-content: center;
+  }
+
+  .stat-number {
+    font-size: 1.1rem;
+  }
+
+  .stat-label {
+    font-size: 0.65rem;
+  }
+
+  .stat-item {
+    min-width: 70px;
   }
 }
