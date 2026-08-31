@@ -1,21 +1,21 @@
 :root {
   /* === BALANCED: White base + green accent === */
 
-  /* Primary: emerald green (only for accents) */
-  --color-primary: #059669;
-  --color-primary-light: #10b981;
-  --color-primary-hover: #047857;
-  --color-primary-dark: #065f46;
-  --color-primary-bg: #ecfdf5;
+  /* Primary: electric blue */
+  --color-primary: #1B5FBF;
+  --color-primary-light: #2E7BE0;
+  --color-primary-hover: #164A99;
+  --color-primary-dark: #0F3670;
+  --color-primary-bg: #EAF2FC;
 
-  /* Accent: warm amber (secondary accent) */
-  --color-accent: #d97706;
-  --color-accent-light: #f59e0b;
-  --color-accent-bg: #fffbeb;
+  /* Accent: copper */
+  --color-accent: #B5651D;
+  --color-accent-light: #D97706;
+  --color-accent-bg: #FDF6EC;
 
   /* Highlight: green */
-  --color-highlight: #059669;
-  --color-highlight-bg: #f0fdf4;
+  --color-highlight: #1F7A4D;
+  --color-highlight-bg: #EAF7EF;
 
   /* Fondos: clean white and very light grays */
   --color-bg: #ffffff;
